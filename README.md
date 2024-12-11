@@ -1,0 +1,2 @@
+# boilerplate-maven
+maven
