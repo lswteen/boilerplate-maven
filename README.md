@@ -21,6 +21,13 @@ mvn archetype:generate \
     -DartifactId=step-backend-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
+    
+    
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=step-client-server \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false    
 ```
 
 

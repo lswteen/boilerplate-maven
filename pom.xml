@@ -5,18 +5,15 @@
   <version>0.0.1-SNAPSHOT</version>
   <!-- 부모 POM은 반드시 pom -->
   <packaging>pom</packaging>
-
   <!-- 자식 모듈 선언 -->
   <modules>
     <module>step-backend-server</module>
     <module>step-client-server</module>
   </modules>
-
   <!-- 공통 프로퍼티 관리 -->
   <properties>
     <java.version>17</java.version>
   </properties>
-
   <!-- 공통 설정 관리 -->
   <dependencyManagement>
     <dependencies>
@@ -42,8 +39,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-
   <build>
     <pluginManagement>
       <plugins>
