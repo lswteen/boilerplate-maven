@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="step-backend-server" />
+        <module name="gateway" />
         <module name="step-client-server" />
       </profile>
     </annotationProcessing>
