@@ -7,27 +7,16 @@
     <artifactId>boilerplate-maven</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-
-  <artifactId>gateway</artifactId>
+  <groupId>com.farfarcoder</groupId>
+  <artifactId>domain</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>gateway</name>
-
-  <properties>
-    <spring.boot.version>3.4.0</spring.boot.version>
-  </properties>
-
+  <name>domain</name>
+  <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-gateway</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
