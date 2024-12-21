@@ -53,8 +53,7 @@ mvn archetype:generate \
     -DgroupId=com.farfarcoder \
     -DartifactId=step-backend-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false
-    
+    -DinteractiveMode=false    
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
@@ -87,9 +86,7 @@ mvn archetype:generate \
     -DinteractiveMode=false           
 ```
 
-
 # maven 명령어
-
 ## maven 기본 클린 및 install
 mvn clean install
 ## maven 실행 및 에러로그 추가 컴파일
