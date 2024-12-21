@@ -10,7 +10,7 @@
 
   <artifactId>tour-api-server</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>step-backend-server</name>
+  <name>tour-api-server</name>
 
 
   <properties>

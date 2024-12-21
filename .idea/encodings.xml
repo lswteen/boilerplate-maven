@@ -4,9 +4,9 @@
     <file url="file://$PROJECT_DIR$/exit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/exit/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/step-backend-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/step-backend-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/step-client-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/step-client-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/step-hts-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/step-hts-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tour-api-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tour-api-server/src/main/resources" charset="UTF-8" />
   </component>
 </project>

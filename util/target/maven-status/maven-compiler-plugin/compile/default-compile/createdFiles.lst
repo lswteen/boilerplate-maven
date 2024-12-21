@@ -1,0 +1,12 @@
+com/farfarcoder/util/ProfileUtil.class
+com/farfarcoder/util/exception/ConfigurationFailException.class
+com/farfarcoder/util/ObjectMapperUtils.class
+com/farfarcoder/util/FormatUtils.class
+com/farfarcoder/util/HttpUtils.class
+com/farfarcoder/util/CookieUtils.class
+com/farfarcoder/util/exception/ObjectMapperUtilsException.class
+com/farfarcoder/util/HeaderUtils.class
+com/farfarcoder/util/UserAgentParseUtils.class
+com/farfarcoder/util/jackson/HTMLCharacterEscapes.class
+com/farfarcoder/util/DataBufferUtils.class
+com/farfarcoder/util/codec/XssFormHttpMessageReader.class
