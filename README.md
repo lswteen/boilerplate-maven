@@ -30,6 +30,7 @@ gateway/                   <-- 루트 프로젝트 (Parent)
 생성가능한 artifactId명령어 모음
 ```text
 Choose archetype:
+
 1: internal -> org.apache.maven.archetypes:maven-archetype-archetype (An archetype which contains a sample archetype.)
 2: internal -> org.apache.maven.archetypes:maven-archetype-j2ee-simple (An archetype which contains a simplifed sample J2EE application.)
 3: internal -> org.apache.maven.archetypes:maven-archetype-plugin (An archetype which contains a sample Maven plugin.)
