@@ -44,3 +44,8 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+
+logging:
+  level:
+    org.springdoc: DEBUG
+    org.springframework: DEBUG
