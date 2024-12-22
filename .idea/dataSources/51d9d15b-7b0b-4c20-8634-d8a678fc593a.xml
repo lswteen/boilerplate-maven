@@ -169,10 +169,138 @@
     <schema id="162" parent="2" name="INFORMATION_SCHEMA"/>
     <schema id="163" parent="2" name="PUBLIC">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-12-22.04:35:05</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-12-22.11:10:56</LastIntrospectionLocalTimestamp>
     </schema>
     <user id="164" parent="2" name="TOUR">
       <Admin>1</Admin>
     </user>
+    <table id="165" parent="163" name="AIRFLY"/>
+    <table id="166" parent="163" name="HOTEL"/>
+    <table id="167" parent="163" name="PKG"/>
+    <column id="168" parent="165" name="ID">
+      <ColumnKind>generated-stored</ColumnKind>
+      <DasType>BIGINT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceInline>1</SequenceInline>
+      <SequenceDasType>BIGINT|0s</SequenceDasType>
+      <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
+      <SequenceStartValue>1</SequenceStartValue>
+    </column>
+    <column id="169" parent="165" name="NAME">
+      <DasType>CHARACTER VARYING(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="170" parent="165" name="DESCRIPTION">
+      <DasType>CHARACTER VARYING|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="171" parent="165" name="CAPACITY">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="172" parent="165" name="CREATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="173" parent="165" name="UPDATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="174" parent="165" name="PRIMARY_KEY_7">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="175" parent="165" name="CONSTRAINT_7">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="176" parent="166" name="ID">
+      <ColumnKind>generated-stored</ColumnKind>
+      <DasType>BIGINT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceInline>1</SequenceInline>
+      <SequenceDasType>BIGINT|0s</SequenceDasType>
+      <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
+      <SequenceStartValue>1</SequenceStartValue>
+    </column>
+    <column id="177" parent="166" name="NAME">
+      <DasType>CHARACTER VARYING(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="178" parent="166" name="LOCATION">
+      <DasType>CHARACTER VARYING(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="179" parent="166" name="STARS">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="180" parent="166" name="CREATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="181" parent="166" name="UPDATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="182" parent="166" name="PRIMARY_KEY_4">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="183" parent="166" name="CONSTRAINT_4">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="184" parent="167" name="ID">
+      <ColumnKind>generated-stored</ColumnKind>
+      <DasType>BIGINT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceInline>1</SequenceInline>
+      <SequenceDasType>BIGINT|0s</SequenceDasType>
+      <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
+      <SequenceStartValue>1</SequenceStartValue>
+    </column>
+    <column id="185" parent="167" name="NAME">
+      <DasType>CHARACTER VARYING(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="186" parent="167" name="DETAILS">
+      <DasType>CHARACTER VARYING|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="187" parent="167" name="PRICE">
+      <DasType>NUMERIC(10,2)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="188" parent="167" name="CREATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="189" parent="167" name="UPDATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="190" parent="167" name="PRIMARY_KEY_1">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="191" parent="167" name="CONSTRAINT_1">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

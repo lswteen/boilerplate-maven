@@ -7,6 +7,11 @@ spring:
     driver-class-name: org.h2.Driver
     username: tour
     password: qwer1234
+  sql:
+    init:
+      mode: always            # 항상 SQL 초기화 실행
+      schema-locations: classpath:sql/tour-ddl.sql  # 스키마 초기화 파일 위치
+      data-locations: classpath:sql/tour-dml.sql # 데이터 삽입 파일 위치
     hikari:
       maximum-pool-size: 30             # (default : 10)최대 pool size,
         # "Connection is not available, request timed out after ${connection-timeout}ms" 오류 밸상되면 pool locking(deadlock)상태임,
@@ -48,5 +53,7 @@ springdoc:
 logging:
   level:
     com.farfarcoder: DEBUG
-    org.springdoc: DEBUG
-    org.springframework: DEBUG
+    org.springdoc: INFO
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE

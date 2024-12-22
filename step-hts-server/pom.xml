@@ -18,6 +18,7 @@
     <mybatis.version>3.0.0</mybatis.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <projectlombok.version>0.2.0</projectlombok.version>
+    <junit.version>3.8.1</junit.version>
   </properties>
 
   <dependencies>
@@ -88,7 +89,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>RELEASE</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

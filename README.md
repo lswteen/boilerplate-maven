@@ -1,27 +1,27 @@
 # boilerplate-maven
-maven
+## maven
 
 ## 프로젝트 구조
  
 ```text
 gateway/                   <-- 루트 프로젝트 (Parent)  
 ├── pom.xml                <-- 부모 POM (공통 설정)  
-├── auth/                  <-- 인증  
+├── auth-server/           <-- 인증 서버 
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드  
-├── domain/                <-- 도메인
+├── domain/                <-- GATEWAY 도메인
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
-├── gateway/               <-- gateway  
+├── partner-gateway/       <-- 제휴사 gateway  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
-├── step-backend-server/   <-- 백엔드 서버 모듈  
+├── step-hts-server/       <-- hts 테스트 서버  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
-├── step-client-server/    <-- client  
+├── tour-api-server/       <-- tour api  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
-├── util/                  <-- 공통유틸  
+├── util/                  <-- GATEWAY 공통 유틸  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
 ```
@@ -46,30 +46,30 @@ Choose archetype:
 10: internal -> org.apache.maven.archetypes:maven-archetype-webapp (An archetype which contains a sample Maven Webapp project.)
 
 ```
-mvn archetype:generate -DarchetypeCatalog=internal
+>mvn archetype:generate -DarchetypeCatalog=internal
 
 ```
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=step-backend-server \
+    -DartifactId=tour-api-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false    
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=step-client-server \
+    -DartifactId=step-hts-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=gateway \
+    -DartifactId=partner-gateway \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=auth \
+    -DartifactId=auth-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false            
     
@@ -88,8 +88,8 @@ mvn archetype:generate \
 
 # maven 명령어
 ## maven 기본 클린 및 install
-mvn clean install
+>mvn clean install
 ## maven 실행 및 에러로그 추가 컴파일
-mvn clean compile -e
+>mvn clean compile -e
 ## main maven 실행
-mvn spring-boot:run
+>mvn spring-boot:run

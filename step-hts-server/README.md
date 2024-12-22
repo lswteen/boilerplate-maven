@@ -11,3 +11,13 @@
 
 ## step-hts-server Run
 >mvn clean spring-boot:run
+
+## db h2 접속 URI
+```text
+http://localhost:18080/h2-console
+```
+
+## Swagger-ui
+```text
+http://localhost:18080/swagger-ui/index.html
+```

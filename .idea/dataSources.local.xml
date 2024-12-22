@@ -16,5 +16,10 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="default@localhost" uuid="41434f28-b54b-407a-9082-e6f7fa78692d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
+      <user-name>tour</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
