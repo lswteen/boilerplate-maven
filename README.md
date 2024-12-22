@@ -51,25 +51,25 @@ mvn archetype:generate -DarchetypeCatalog=internal
 ```
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=step-backend-server \
+    -DartifactId=tour-api-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false    
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=step-client-server \
+    -DartifactId=step-hts-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=gateway \
+    -DartifactId=partner-gateway \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=auth \
+    -DartifactId=auth-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false            
     
