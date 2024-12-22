@@ -32,14 +32,14 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
     properties:
       dialect: org.hibernate.dialect.H2Dialect
       hibernate:
         format_sql: true
         show_sql: false
     database-platform: org.hibernate.dialect.H2Dialect
-    defer-datasource-initialization: false
+    defer-datasource-initialization: true
     open-in-view: false
   data:
     web:
