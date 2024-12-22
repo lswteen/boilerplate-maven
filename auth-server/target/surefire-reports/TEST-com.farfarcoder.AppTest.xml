@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="KR"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/lswteen/workspace/boilerplate-maven/auth-server/target/surefire/surefirebooter-20241222184014384_12.jar /Users/lswteen/workspace/boilerplate-maven/auth-server/target/surefire 2024-12-22T18-40-10_279-jvmRun1 surefire-20241222184014384_10tmp surefire_3-20241222184014384_11tmp"/>
+    <property name="sun.java.command" value="/Users/lswteen/workspace/boilerplate-maven/auth-server/target/surefire/surefirebooter-20241222191436133_12.jar /Users/lswteen/workspace/boilerplate-maven/auth-server/target/surefire 2024-12-22T19-14-31_872-jvmRun1 surefire-20241222191436133_10tmp surefire_3-20241222191436133_11tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/lswteen/workspace/boilerplate-maven/auth-server/target/test-classes:/Users/lswteen/workspace/boilerplate-maven/auth-server/target/classes:/Users/lswteen/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/lswteen/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/lswteen/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/lswteen/workspace/boilerplate-maven/auth-server/target/surefire/surefirebooter-20241222184014384_12.jar"/>
+    <property name="surefire.real.class.path" value="/Users/lswteen/workspace/boilerplate-maven/auth-server/target/surefire/surefirebooter-20241222191436133_12.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.1"/>
@@ -58,5 +58,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testApp" classname="com.farfarcoder.AppTest" time="0.001"/>
+  <testcase name="testApp" classname="com.farfarcoder.AppTest" time="0.002"/>
 </testsuite>

@@ -47,5 +47,6 @@ springdoc:
 
 logging:
   level:
+    com.farfarcoder: DEBUG
     org.springdoc: DEBUG
     org.springframework: DEBUG

@@ -8,3 +8,6 @@
 - Swagger UI 3로 API 문서화
 - 모든 API 호출에 인증 토큰 검증
 ```
+
+## step-hts-server Run
+>mvn clean spring-boot:run
