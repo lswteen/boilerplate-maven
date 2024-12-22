@@ -28,15 +28,7 @@ tour:
     routes:
       gateway-api:
         - predicates:
-            - Path=/api/hts/airfly
-          filters:
-            - AuthenticationCheckFilter
-        - predicates:
-            - Path=/api/hts/hotel
-          filters:
-            - AuthenticationCheckFilter
-        - predicates:
-            - Path=/api/hts/package
+            - Path=/api/hts/airflies/{id}
           filters:
             - AuthenticationCheckFilter
 
