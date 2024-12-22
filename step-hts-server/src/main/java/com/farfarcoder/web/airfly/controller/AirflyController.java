@@ -1,6 +1,5 @@
 package com.farfarcoder.web.airfly.controller;
 
-import com.farfarcoder.web.airfly.dto.AirflyRequest;
 import com.farfarcoder.web.airfly.dto.AirflyResponse;
 import com.farfarcoder.web.airfly.service.AirflyWebService;
 import lombok.RequiredArgsConstructor;
