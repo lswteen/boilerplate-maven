@@ -21,8 +21,10 @@
     <spring.boot.version>3.4.0</spring.boot.version>
     <spring.cloud.version>2024.0.0</spring.cloud.version>
     <maven.compiler.plugin>3.11.0</maven.compiler.plugin>
-    <lombok>1.18.30</lombok>
-    <junit>3.8.1</junit>
+    <lombok.version>1.18.30</lombok.version>
+    <junit.version>3.8.1</junit.version>
+    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <projectlombok.version>0.2.0</projectlombok.version>
   </properties>
 
   <!-- 공통 설정 관리 -->
@@ -44,33 +46,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- Spring Boot Web Starter -->
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-        <version>${spring.cloud.version}</version>
-      </dependency>
-      <!-- Lombok -->
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>${lombok}</version>
-        <scope>provided</scope> <!-- Lombok은 컴파일 타임에만 필요하므로 provided scope로 설정 -->
-      </dependency>
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>${lombok}</version>
-        <scope>provided</scope>
-        <optional>true</optional> <!-- Optional true는 Lombok이 테스트에서만 필요할 경우 설정 -->
-      </dependency>
-      <!-- junit-->
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>${junit}</version>
-        <scope>test</scope>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -90,7 +65,17 @@
               <path>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>${lombok}</version>
+                <version>${lombok.version}</version>
+              </path>
+              <path>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+              </path>
+              <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-mapstruct-binding</artifactId>
+                <version>${projectlombok.version}</version>
               </path>
             </annotationProcessorPaths>
           </configuration>
