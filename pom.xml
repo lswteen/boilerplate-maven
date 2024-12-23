@@ -11,10 +11,10 @@
     <module>step-hts-server</module>
     <module>partner-gateway</module>
     <module>auth-server</module>
-    <module>domain</module>
-    <module>util</module>
+    <module>gateway-domain</module>
+    <module>gateway-util</module>
+    <module>web-common</module>
   </modules>
-
   <!-- 공통 프로퍼티 관리 -->
   <properties>
     <java.version>17</java.version>
@@ -26,7 +26,6 @@
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <projectlombok.version>0.2.0</projectlombok.version>
   </properties>
-
   <!-- 공통 설정 관리 -->
   <dependencyManagement>
     <dependencies>
@@ -48,7 +47,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -88,5 +86,4 @@
       </plugins>
     </pluginManagement>
   </build>
-
 </project>

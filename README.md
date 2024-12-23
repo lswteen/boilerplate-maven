@@ -72,16 +72,22 @@ mvn archetype:generate \
     -DartifactId=auth-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false            
+
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=web-common \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false  
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=domain \
+    -DartifactId=gateway-domain \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
 
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=util \
+    -DartifactId=gateway-util \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false           
 ```

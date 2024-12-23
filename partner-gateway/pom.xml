@@ -20,13 +20,13 @@
     <!-- gateway common domain -->
     <dependency>
       <groupId>com.farfarcoder</groupId>
-      <artifactId>domain</artifactId>
+      <artifactId>gateway-domain</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
     <!--gateway common util -->
     <dependency>
       <groupId>com.farfarcoder</groupId>
-      <artifactId>util</artifactId>
+      <artifactId>gateway-util</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
     <!-- starter-->
