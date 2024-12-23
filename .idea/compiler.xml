@@ -22,8 +22,8 @@
         <module name="gateway-util" />
         <module name="partner-gateway" />
         <module name="tour-api-server" />
-        <module name="web-common" />
         <module name="gateway-domain" />
+        <module name="web-common" />
         <module name="step-hts-server" />
       </profile>
     </annotationProcessing>
