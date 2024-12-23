@@ -1,1 +1,5 @@
-/Users/lswteen/workspace/boilerplate-maven/web-common/src/main/java/com/farfarcoder/App.java
+/Users/lswteen/workspace/boilerplate-maven/web-common/src/main/java/com/farfarcoder/type/ServiceErrorType.java
+/Users/lswteen/workspace/boilerplate-maven/web-common/src/main/java/com/farfarcoder/exception/ApiExceptionHandler.java
+/Users/lswteen/workspace/boilerplate-maven/web-common/src/main/java/com/farfarcoder/response/ApiErrorResponse.java
+/Users/lswteen/workspace/boilerplate-maven/web-common/src/main/java/com/farfarcoder/exception/ApiErrorAttributes.java
+/Users/lswteen/workspace/boilerplate-maven/web-common/src/main/java/com/farfarcoder/exception/ApiException.java
