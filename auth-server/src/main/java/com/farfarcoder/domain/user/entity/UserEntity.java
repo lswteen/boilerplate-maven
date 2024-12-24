@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Set;
 
@@ -31,20 +32,15 @@ public class UserEntity {
     private String password;
 
     @Column(name="id_type")
+    @Enumerated(EnumType.STRING)
     private UserType idType;
 
     @Column(name="id_value")
     private String idValue;
 
-    @Column(name="created_at")
-    private Instant createdAt;
-
-    @Column(name="updated_at")
-    private Instant updatedAt;
-
-    @ElementCollection(fetch = FetchType.EAGER)
-    @Enumerated(EnumType.STRING)
-    private Set<UserRole> roles;
+//    @ElementCollection(fetch = FetchType.EAGER)
+//    @Enumerated(EnumType.STRING)
+//    private Set<UserRole> roles;
 
     @OneToMany(mappedBy = "userEntity", fetch = FetchType.LAZY)
     private Collection<RefreshTokenEntity> refreshTokens;
