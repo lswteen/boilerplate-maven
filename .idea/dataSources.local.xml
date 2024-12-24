@@ -16,10 +16,20 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="default@localhost" uuid="41434f28-b54b-407a-9082-e6f7fa78692d">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
-      <user-name>tour</user-name>
-      <schema-mapping />
+    <data-source name="user" uuid="b31d2fed-b921-41ef-97f3-1449274d49f2">
+      <database-info product="H2" version="2.2.220 (2023-07-04)" jdbc-version="4.2" driver-name="H2 JDBC Driver" driver-version="2.2.220 (2023-07-04)" dbms="H2" exact-version="2.2.220" exact-driver-version="2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>user</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

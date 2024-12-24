@@ -18,8 +18,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="auth-server" />
         <module name="gateway-util" />
+        <module name="auth-server" />
         <module name="partner-gateway" />
         <module name="tour-api-server" />
         <module name="gateway-domain" />
