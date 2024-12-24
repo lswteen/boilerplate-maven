@@ -1,6 +1,6 @@
 package com.farfarcoder.web.airfly.controller;
 
-import com.farfarcoder.web.airfly.dto.AirflyResponse;
+import com.farfarcoder.web.airfly.controller.dto.AirflyResponse;
 import com.farfarcoder.web.airfly.service.AirflyWebService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

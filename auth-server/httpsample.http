@@ -1,0 +1,47 @@
+### swagger ui api
+GET http://localhost:8888/swagger-ui.html
+
+### 회원가입
+
+POST http://localhost:8888/user/singup
+Content-Type: application/json
+
+{
+  "userId": "renzo@gmail.com",
+  "name": "renzo",
+  "password": "renzo123",
+  "idType": "REG_NO",
+  "idValue": "8012248432142"
+}
+
+### 회원 로그인
+POST http://localhost:8888/user/login
+Content-Type: application/json
+
+{
+  "userId": "renzo@gmail.com",
+  "password": "renzo123"
+}
+
+### 환율정보 수집
+GET https://quotation-api-cdn.dunamu.com:443/v1/forex/recent?codes=,FRX.KRWJPY,FRX.KRWUSD
+
+### 견적서 요청
+POST http://localhost:8888/transfer/quote
+Content-Type: application/json
+
+{
+  "targetCurrency": "JPY",
+  "amount": 50000
+}
+
+
+### 견적서 요청
+POST http://localhost:8888/transfer/request
+Content-Type: application/json
+
+{
+  "quoteId": "1",
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyZW56b0BnbWFpbC5jb20iLCJhdXRoIjoiIiwidWlkIjoxLCJ0eXBlIjoiUkVHX05PIiwiZXhwIjoxNzA4NjcwNzM0fQ.4LK7ppENywPfmMVeLSxMuSuk4Q3EEocSmrsHcN661-OtBG2tlNHlEUE2DzwpMA09uhIPQ8G51Q3JbyBrlUVMOA"
+}
+

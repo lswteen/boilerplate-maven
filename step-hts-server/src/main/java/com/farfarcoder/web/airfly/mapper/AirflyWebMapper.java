@@ -1,8 +1,8 @@
 package com.farfarcoder.web.airfly.mapper;
 
 import com.farfarcoder.domain.airfly.model.Airfly;
-import com.farfarcoder.web.airfly.dto.AirflyRequest;
-import com.farfarcoder.web.airfly.dto.AirflyResponse;
+import com.farfarcoder.web.airfly.controller.dto.AirflyRequest;
+import com.farfarcoder.web.airfly.controller.dto.AirflyResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

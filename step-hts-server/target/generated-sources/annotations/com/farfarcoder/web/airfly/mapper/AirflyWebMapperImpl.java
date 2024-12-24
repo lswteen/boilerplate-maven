@@ -1,13 +1,13 @@
 package com.farfarcoder.web.airfly.mapper;
 
 import com.farfarcoder.domain.airfly.model.Airfly;
-import com.farfarcoder.web.airfly.dto.AirflyResponse;
+import com.farfarcoder.web.airfly.controller.dto.AirflyResponse;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-12-23T21:33:01+0900",
+    date = "2024-12-23T21:34:01+0900",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 23.0.1 (Homebrew)"
 )
 @Component

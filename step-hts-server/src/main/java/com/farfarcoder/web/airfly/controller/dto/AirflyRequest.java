@@ -1,4 +1,4 @@
-package com.farfarcoder.web.airfly.dto;
+package com.farfarcoder.web.airfly.controller.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;

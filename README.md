@@ -98,7 +98,7 @@ mvn archetype:generate \
 ## maven 실행 및 에러로그 추가 컴파일
 >mvn clean compile -e
 ## main maven 실행
->mvn spring-boot:run
+>mvn clean spring-boot:run
 
 
 #시나리오 테스트 
