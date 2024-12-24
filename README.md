@@ -153,3 +153,7 @@ http://partner-gateway.lottecard.com:8080/api/hts/airflies
 
 ## 정상적으로 HTS 도메인에 항공 리스트 호출
 <img width="1161" alt="스크린샷 2024-12-22 오후 9 18 32" src="https://github.com/user-attachments/assets/53db8244-7164-4fdc-be26-67472fe26982" />
+
+
+## intellij 코드충돌시
+![스크린샷 2024-12-24 오후 11 16 01](https://github.com/user-attachments/assets/9b3de804-32dd-448c-89f0-5deced93a127)
