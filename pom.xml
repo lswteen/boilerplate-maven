@@ -7,10 +7,10 @@
   <packaging>pom</packaging>
   <!-- 자식 모듈 선언 -->
   <modules>
-    <module>tour-api-server</module>
+    <module>tour-api</module>
     <module>step-hts-server</module>
     <module>partner-gateway</module>
-    <module>auth-server</module>
+    <module>auth-api</module>
     <module>gateway-domain</module>
     <module>gateway-util</module>
     <module>web-common</module>
