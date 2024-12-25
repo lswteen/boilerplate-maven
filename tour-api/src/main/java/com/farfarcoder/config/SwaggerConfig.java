@@ -11,9 +11,9 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("STEP-HTS-SERVER API")
+                .info(new Info().title("TOUR API")
                         .version("1.0.0")
-                        .description("HTS 캐나다 투어 시스템 dummy 서버"));
+                        .description("Tour PC,Mobile Server"));
     }
 
     @Bean

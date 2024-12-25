@@ -14,6 +14,11 @@
 
   <properties>
     <spring.boot.version>3.4.0</spring.boot.version>
+    <lombok.version>1.18.30</lombok.version>
+    <mybatis.version>3.0.0</mybatis.version>
+    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <projectlombok.version>0.2.0</projectlombok.version>
+    <junit.version>3.8.1</junit.version>
   </properties>
 
   <dependencies>
@@ -22,6 +27,60 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
       <version>${spring.boot.version}</version>
+    </dependency>
+   <!-- aop -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.22.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- Swagger UI -->
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>2.7.0</version>
+    </dependency>
+    <!-- hibernate orm -->
+    <dependency>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>6.6.2.Final</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- H2 Database -->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- MyBatis -->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+    <!-- HikariCP for Connection Pooling -->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+    </dependency>
+    <!-- MapStruct -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>${mapstruct.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>${mapstruct.version}</version>
+      <scope>provided</scope> <!-- 컴파일 타임에만 필요 -->
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok-mapstruct-binding</artifactId>
+      <version>${projectlombok.version}</version>
     </dependency>
     <!-- Lombok -->
     <dependency>
@@ -34,6 +93,8 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
+
+
 
   </dependencies>
 </project>

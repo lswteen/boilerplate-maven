@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class StepBackendServerApplication {
+public class TourApplication {
     public static void main(String[] args) {
-        SpringApplication.run(StepBackendServerApplication.class, args);
+        SpringApplication.run(TourApplication.class, args);
     }
 }

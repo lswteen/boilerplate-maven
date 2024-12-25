@@ -34,7 +34,11 @@ gateway/                   <-- 루트 프로젝트 (Parent)
 
 ├── step-hts-server/       <-- 항공,여행,패키지 hts 테스트 서버  
 │   ├── pom.xml            <-- 모듈 POM  
-│   └── src/main/java      <-- Java 소스 코드 
+│   └── src/main/java      <-- Java 소스 코드
+
+├── step-naver-server/     <-- Naver channel 서버  
+│   ├── pom.xml            <-- 모듈 POM  
+│   └── src/main/java      <-- Java 소스 코드  
 
 ├── web-common/            <-- 웹 공통 도메인 
 │   ├── pom.xml            <-- 모듈 POM  
@@ -97,6 +101,15 @@ mvn archetype:generate \
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
     -DartifactId=step-hts-server \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false
+```
+
+## Naver Dummy Server
+```html
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=step-naver-server \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
 ```
