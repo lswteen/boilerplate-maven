@@ -1,29 +1,51 @@
-# boilerplate-maven
-## maven
+# Boilerplate-Maven With Java17 Spring 3.4.0
 
 ## 프로젝트 구조
- 
+### 좋은 어플리케이션은 만들떈 알수 없다.
+### 만들고 나서 수정을 할때 최소한의 작업과 장애 발생 영향도를 최소화 할수 있어야 한다.!
+### 무조건 나누고 쪼갠다고 좋은 아키텍처라 할수없다.
+### 상황에 맞게 아키텍처를 설계하고 구성해야 한다.
+### MSA는 정답이 아니다!!
+
+
+```html
+maven POM으로 구성된 미니 MSA 보일러플레이트 레이어드 MVC 아키텍처 
+DDD 도메인 드리븐 디자인 
+부모 자식간 계층형 멀티모듈 각 도메인 주도적인 레이어
+단위 통합 테스트 구성
+소규모 리소스를 기반으로 확장 가능한 구조
+```
+## 계층 구조 설명
 ```text
 gateway/                   <-- 루트 프로젝트 (Parent)  
 ├── pom.xml                <-- 부모 POM (공통 설정)  
-├── auth-server/           <-- 인증 서버 
+├── gateway-domain/        <-- GATEWAY 도메인
 │   ├── pom.xml            <-- 모듈 POM  
-│   └── src/main/java      <-- Java 소스 코드  
-├── domain/                <-- GATEWAY 도메인
+│   └── src/main/java      <-- Java 소스 코드 
+├── gateway-util/          <-- GATEWAY 공통 유틸  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
 ├── partner-gateway/       <-- 제휴사 gateway  
 │   ├── pom.xml            <-- 모듈 POM  
-│   └── src/main/java      <-- Java 소스 코드 
-├── step-hts-server/       <-- hts 테스트 서버  
+│   └── src/main/java      <-- Java 소스 코드
+├── channel-gateway/       <-- 채널 gateway  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
-├── tour-api-server/       <-- tour api  
+
+├── step-hts-server/       <-- 항공,여행,패키지 hts 테스트 서버  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
-├── util/                  <-- GATEWAY 공통 유틸  
+
+├── web-common/            <-- 웹 공통 도메인 
+│   ├── pom.xml            <-- 모듈 POM  
+│   └── src/main/java      <-- Java 소스 코드  
+├── auth-api/              <-- 유저 인증/인가 서버 
+│   ├── pom.xml            <-- 모듈 POM  
+│   └── src/main/java      <-- Java 소스 코드  
+├── tour-api/              <-- tour api  
 │   ├── pom.xml            <-- 모듈 POM  
 │   └── src/main/java      <-- Java 소스 코드 
+
 ```
 
 ## 멀티모듈 만들기 
@@ -48,28 +70,18 @@ Choose archetype:
 ```
 >mvn archetype:generate -DarchetypeCatalog=internal
 
+## Web Boilerplate
+투어, 유저&인증인가, 공통 에러 처리
 ```
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=tour-api-server \
+    -DartifactId=tour-api \
     -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false    
+    -DinteractiveMode=false       
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=step-hts-server \
-    -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false
-    
-mvn archetype:generate \
-    -DgroupId=com.farfarcoder \
-    -DartifactId=partner-gateway \
-    -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false
-    
-mvn archetype:generate \
-    -DgroupId=com.farfarcoder \
-    -DartifactId=auth-server \
+    -DartifactId=auth-api \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false            
 
@@ -77,7 +89,26 @@ mvn archetype:generate \
     -DgroupId=com.farfarcoder \
     -DartifactId=web-common \
     -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false  
+    -DinteractiveMode=false
+```
+
+## HTS Dummy Server
+```text
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=step-hts-server \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false
+```
+
+## Gateway Boilerplate   
+제휴사, 파트너, 공통 domain, 공통 유틸
+``` 
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=partner-gateway \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false      
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
