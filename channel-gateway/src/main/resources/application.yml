@@ -1,6 +1,6 @@
 spring:
   application:
-    name: partner-gateway
+    name: channel-gateway
 
   profiles:
     active: local
@@ -93,4 +93,4 @@ management:
 # server graceful 추가
 server:
   shutdown: graceful
-  port: 9999
+  port: 8888

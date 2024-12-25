@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class TourGatewayApplicationTest
+public class ChannelGatewayApplicationTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class TourGatewayApplicationTest
      *
      * @param testName name of the test case
      */
-    public TourGatewayApplicationTest(String testName )
+    public ChannelGatewayApplicationTest(String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class TourGatewayApplicationTest
      */
     public static Test suite()
     {
-        return new TestSuite( TourGatewayApplicationTest.class );
+        return new TestSuite( ChannelGatewayApplicationTest.class );
     }
 
     /**

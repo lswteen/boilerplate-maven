@@ -1,0 +1,45 @@
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "info", "health", "refresh", "beans", "configprops", "env", "mappings" ]
+  endpoint:
+    configprops:
+      show-values: when_authorized
+  info:
+    git:
+      enabled: true
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: tour-api
+          predicates:
+            - Path=/api/tour/**
+          uri: http://localhost:38080
+          filters:
+            - RewritePath=/api/tour/(?<segment>.*), /tour/$\{segment}
+
+tour:
+  gateway:
+    routes:
+      gateway-api:
+        - predicates:
+            - Path=/api/tour/airflies/{id}
+
+  authorization:
+    auth-info-map:
+      kr:
+        client-ip:
+          - 0:0:0:0:0:0:0:1
+          - 127.0.0.1
+      us:
+        client-ip:
+          - 0:0:0:0:0:0:0:1
+          - 127.0.0.1
+      jp:
+        client-ip:
+          - 2.0.0.0/16

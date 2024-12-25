@@ -102,13 +102,19 @@ mvn archetype:generate \
 ```
 
 ## Gateway Boilerplate   
-제휴사, 파트너, 공통 domain, 공통 유틸
+제휴사(partner), 채널(channel), gateway domain, gateway util
 ``` 
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
     -DartifactId=partner-gateway \
     -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false      
+    -DinteractiveMode=false
+
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=channel-gateway \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false          
     
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
@@ -140,7 +146,7 @@ step-hts-server HTS dummy SERVER 구성
 ```
 ## hosts 설정
 ```text
-127.0.0.1 partner-gateway.lottecard.com
+127.0.0.1 partner-gateway.lottecard.co.kr
 127.0.0.1 hts.com
 ```
 
