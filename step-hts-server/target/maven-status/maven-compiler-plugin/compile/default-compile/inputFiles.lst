@@ -10,13 +10,13 @@
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/pkg/repository/PackageRepository.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/web/airfly/mapper/AirflyWebMapper.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/pkg/service/PackageService.java
-/Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/web/airfly/dto/AirflyResponse.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/hotel/repository/HotelRepository.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/hotel/mapper/HotelMapper.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/hotel/model/Hotel.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/hotel/service/HotelService.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/airfly/entity/AirflyEntity.java
-/Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/web/airfly/dto/AirflyRequest.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/hotel/entity/HotelEntity.java
+/Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/web/airfly/controller/dto/AirflyResponse.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/pkg/entity/PackageEntity.java
+/Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/web/airfly/controller/dto/AirflyRequest.java
 /Users/lswteen/workspace/boilerplate-maven/step-hts-server/src/main/java/com/farfarcoder/domain/pkg/mapper/PackageMapper.java
