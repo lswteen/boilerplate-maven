@@ -15,7 +15,7 @@
   <properties>
     <spring.boot.version>3.4.0</spring.boot.version>
     <lombok.version>1.18.30</lombok.version>
-    <mybatis.version>3.0.0</mybatis.version>
+    <mybatis.version>3.0.3</mybatis.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <projectlombok.version>0.2.0</projectlombok.version>
     <junit.version>3.8.1</junit.version>
@@ -30,10 +30,9 @@
     </dependency>
    <!-- aop -->
     <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>1.9.22.1</version>
-      <scope>compile</scope>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+      <version>${spring.boot.version}</version>
     </dependency>
     <!-- Swagger UI -->
     <dependency>
