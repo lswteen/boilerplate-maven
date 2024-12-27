@@ -10,12 +10,11 @@ com/farfarcoder/web/hotel/controller/dto/HotelRequest.class
 com/farfarcoder/config/SwaggerConfig.class
 com/farfarcoder/web/hotel/controller/dto/HotelResponse$HotelResponseBuilder.class
 com/farfarcoder/config/DataSourceAspect.class
-com/farfarcoder/domain/hotel/repository/read/HotelReadRepository.class
 com/farfarcoder/web/hotel/service/HotelWebService.class
-com/farfarcoder/domain/hotel/repository/write/HotelWriteRepository.class
 com/farfarcoder/domain/hotel/mapper/HotelMapperImpl.class
 com/farfarcoder/domain/hotel/mapper/HotelMapper.class
 com/farfarcoder/web/hotel/controller/HotelController.class
+com/farfarcoder/domain/hotel/repository/HotelRepository.class
 com/farfarcoder/config/RoutingDataSource.class
 com/farfarcoder/web/hotel/controller/dto/HotelResponse.class
 com/farfarcoder/domain/hotel/model/Hotel.class

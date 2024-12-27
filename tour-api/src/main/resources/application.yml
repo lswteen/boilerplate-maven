@@ -2,6 +2,8 @@ server:
   port: 38080
 
 spring:
+  profiles:
+    active: local
   h2:
     console:
       enabled: true
@@ -41,3 +43,10 @@ mybatis:
     map-underscore-to-camel-case: true
     cache-enabled: false
 
+logging:
+  level:
+    com.farfarcoder: DEBUG
+    org.springdoc: INFO
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE

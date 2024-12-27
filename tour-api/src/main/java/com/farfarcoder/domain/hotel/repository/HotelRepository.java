@@ -1,10 +1,18 @@
-package com.farfarcoder.domain.hotel.repository.write;
+package com.farfarcoder.domain.hotel.repository;
 
 import com.farfarcoder.domain.hotel.entity.HotelEntity;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+import java.util.Optional;
 @Mapper
-public interface HotelWriteRepository {
+public interface HotelRepository {
+    @Select("SELECT * FROM tour_hotel WHERE id = #{id}")
+    Optional<HotelEntity> findById(@Param("id") Long id);
+
+    @Select("SELECT * FROM tour_hotel")
+    List<HotelEntity> findAll();
+
 
     @Insert("""
             INSERT INTO tour_hotel(name, location, stars, created_at, updated_at)
@@ -21,5 +29,4 @@ public interface HotelWriteRepository {
 
     @Delete("DELETE FROM tour_hotel WHERE id = #{id}")
     void deleteById(@Param("id") Long id);
-
 }

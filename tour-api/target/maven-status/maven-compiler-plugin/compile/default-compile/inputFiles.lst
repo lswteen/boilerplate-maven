@@ -1,4 +1,3 @@
-/Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/domain/hotel/repository/read/HotelReadRepository.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/TourApplication.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/config/DataSourceConfig.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/web/hotel/controller/dto/HotelResponse.java
@@ -10,7 +9,7 @@
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/config/SwaggerConfig.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/web/hotel/mapper/HotelWebMapper.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/web/hotel/service/HotelWebService.java
-/Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/domain/hotel/repository/write/HotelWriteRepository.java
+/Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/domain/hotel/repository/HotelRepository.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/config/DataSourceAspect.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/domain/hotel/entity/HotelEntity.java
 /Users/lswteen/workspace/boilerplate-maven/tour-api/src/main/java/com/farfarcoder/config/RoutingDataSource.java
