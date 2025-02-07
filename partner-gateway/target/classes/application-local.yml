@@ -4,7 +4,7 @@ management:
     web:
       base-path: /actuator
       exposure:
-        include: [ "info", "health", "refresh", "beans", "configprops", "env", "mappings" ]
+        include: [ "info", "health", "refresh", "beans", "configprops", "env", "mappings","gateway" ]
   endpoint:
     configprops:
       show-values: when_authorized
@@ -18,19 +18,37 @@ spring:
       routes:
         - id: step-hts-server
           predicates:
-            - Path=/api/hts/**
+            - Path=
           uri: http://localhost:18080
           filters:
             - RewritePath=/api/hts/(?<segment>.*), /hts/$\{segment}
+        - id: tour-server
+          predicates:
+            - Path=
+          uri: http://localhost:38080
+          filters:
+            - RewritePath=/api/tour/(?<segment>.*), /tour/$\{segment}
+        - id: user-server
+          predicates:
+            - Path=
+          uri: http://localhost:28080
+          filters:
+            - RewritePath=/api/user/(?<segment>.*), /user/$\{segment}
 
 tour:
   gateway:
     routes:
-      gateway-api:
+      step-hts-server:
         - predicates:
             - Path=/api/hts/airflies/{id}
-          filters:
-            - AuthenticationCheckFilter
+      tour-server:
+        - predicates:
+            - Path=/api/tour/hotels
+      user-server:
+        - predicates:
+            - Path=/api/user/signup
+        - predicates:
+            - Path=/api/user/login
 
   authorization:
     auth-info-map:

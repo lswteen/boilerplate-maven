@@ -1,0 +1,7 @@
+{
+  "commonResponse": {
+    "resultCode": "OK",
+    "resultMsg": "OK"
+  },
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyZW56bzE5NzAiLCJhdXRoIjoiIiwidWlkIjoyMiwidHlwZSI6IlJFR19OTyIsImV4cCI6MTczODkxMDc5OX0.OBcmL0Ciz4-xDzC6ijFyAC95QGgGse-YoXUYd9dWbklT-bNHQxTJ8OZLAkytd2ZNBKzdfvIhFd3z68tM-eR1Vg"
+}

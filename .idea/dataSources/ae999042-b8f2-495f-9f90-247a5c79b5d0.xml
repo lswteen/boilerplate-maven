@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="user">
-  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.51">
-    <root id="1">
-      <ServerVersion>2.2.220</ServerVersion>
-    </root>
+  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.53">
+    <root id="1"/>
     <database id="2" parent="1" name="USER">
       <Current>1</Current>
     </database>
@@ -178,35 +176,34 @@
     <table id="166" parent="163" name="USERS"/>
     <column id="167" parent="165" name="ID">
       <ColumnKind>generated-stored</ColumnKind>
-      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>BIGINT|0s</StoredType>
       <SequenceInline>1</SequenceInline>
-      <SequenceDasType>BIGINT|0s</SequenceDasType>
       <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
       <SequenceStartValue>1</SequenceStartValue>
     </column>
     <column id="168" parent="165" name="USER_MAPPING_ID">
-      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>BIGINT|0s</StoredType>
     </column>
     <column id="169" parent="165" name="TOKEN">
-      <DasType>CHARACTER VARYING(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>CHARACTER VARYING(255)|0s</StoredType>
     </column>
     <column id="170" parent="165" name="CREATED_AT">
-      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>4</Position>
+      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="171" parent="165" name="UPDATED_AT">
       <ColumnKind>generated-virtual</ColumnKind>
-      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
+      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <foreign-key id="172" parent="165" name="FK_USER_MAPPING_ID">
       <ColNames>USER_MAPPING_ID</ColNames>
@@ -235,38 +232,37 @@
     </check>
     <column id="177" parent="166" name="ID">
       <ColumnKind>generated-stored</ColumnKind>
-      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>BIGINT|0s</StoredType>
       <SequenceInline>1</SequenceInline>
-      <SequenceDasType>BIGINT|0s</SequenceDasType>
       <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
       <SequenceStartValue>1</SequenceStartValue>
     </column>
     <column id="178" parent="166" name="USER_ID">
-      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="179" parent="166" name="NAME">
-      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="180" parent="166" name="PASSWORD">
-      <DasType>CHARACTER VARYING(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
+      <StoredType>CHARACTER VARYING(255)|0s</StoredType>
     </column>
     <column id="181" parent="166" name="ID_TYPE">
-      <DasType>CHARACTER VARYING(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
+      <StoredType>CHARACTER VARYING(255)|0s</StoredType>
     </column>
     <column id="182" parent="166" name="ID_VALUE">
-      <DasType>CHARACTER VARYING(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
+      <StoredType>CHARACTER VARYING(255)|0s</StoredType>
     </column>
     <index id="183" parent="166" name="PRIMARY_KEY_4">
       <ColNames>ID</ColNames>

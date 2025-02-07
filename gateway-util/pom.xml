@@ -10,6 +10,7 @@
   <artifactId>gateway-util</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>gateway-util</name>
+
   <dependencies>
     <!-- project 추가모듈 -->
     <dependency>

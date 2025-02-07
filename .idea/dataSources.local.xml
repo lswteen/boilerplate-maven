@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-233.15325.26">
+  <component name="dataSourceStorageLocal" created-in="IU-243.23654.189">
     <data-source name="tour" uuid="51d9d15b-7b0b-4c20-8634-d8a678fc593a">
       <database-info product="H2" version="2.2.220 (2023-07-04)" jdbc-version="4.2" driver-name="H2 JDBC Driver" driver-version="2.2.220 (2023-07-04)" dbms="H2" exact-version="2.2.220" exact-driver-version="2.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -31,7 +31,17 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="hts" uuid="34a3fc45-b1d7-49fe-8566-81bc4dd85e97">
+    <data-source name="default@localhost" uuid="aeae288c-f373-46c1-8c2b-7d4bdb89cbe7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
+      <user-name>user</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="default@localhost" uuid="93145ddf-fe03-4e22-be71-6463c993ffb1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
+      <user-name>hts</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="hts" uuid="698280fc-67bc-425b-b610-67c1243a0eca">
       <database-info product="H2" version="2.2.220 (2023-07-04)" jdbc-version="4.2" driver-name="H2 JDBC Driver" driver-version="2.2.220 (2023-07-04)" dbms="H2" exact-version="2.2.220" exact-driver-version="2.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
