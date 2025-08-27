@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Hotel Lotte",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 2,
+    "name": "Paradise City",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 3,
+    "name": "Shilla Stay",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 4,
+    "name": "InterContinental",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 5,
+    "name": "Ramada Encore",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 6,
+    "name": "Novotel",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 7,
+    "name": "Hilton Seoul",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 8,
+    "name": "Golden Tulip",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 9,
+    "name": "Ibis Styles",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  },
+  {
+    "id": 10,
+    "name": "Hyatt Regency",
+    "description": null,
+    "capacity": null,
+    "createdAt": "2025/01/09 20:04:40",
+    "updatedAt": "2025/01/09 20:04:40"
+  }
+]
