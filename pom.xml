@@ -15,6 +15,7 @@
     <module>gateway-util</module>
     <module>web-common</module>
     <module>channel-gateway</module>
+    <module>scm-api</module>
   </modules>
   <!-- 공통 프로퍼티 관리 -->
   <properties>
@@ -79,6 +80,12 @@
             </annotationProcessorPaths>
           </configuration>
         </plugin>
+        <!-- sonarQube -->
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.9.1.2184</version>
+        </plugin>
         <!-- Spring Boot 실행 플러그인 -->
         <plugin>
           <groupId>org.springframework.boot</groupId>
@@ -87,4 +94,12 @@
       </plugins>
     </pluginManagement>
   </build>
+  <profiles>
+    <profile>
+      <id>sonar</id>
+      <properties>
+        <sonar.skip>true</sonar.skip>
+      </properties>
+    </profile>
+  </profiles>
 </project>

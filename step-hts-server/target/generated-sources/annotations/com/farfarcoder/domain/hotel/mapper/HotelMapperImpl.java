@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-02-07T14:40:31+0900",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.13 (Amazon.com Inc.)"
+    date = "2025-08-25T14:16:03+0900",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.42.50.v20250729-0351, environment: Java 21.0.8 (Eclipse Adoptium)"
 )
 @Component
 public class HotelMapperImpl implements HotelMapper {
@@ -21,11 +21,11 @@ public class HotelMapperImpl implements HotelMapper {
 
         Hotel.HotelBuilder hotel = Hotel.builder();
 
-        hotel.id( hotelEntity.getId() );
-        hotel.name( hotelEntity.getName() );
-        hotel.location( hotelEntity.getLocation() );
-        hotel.stars( hotelEntity.getStars() );
         hotel.createdAt( hotelEntity.getCreatedAt() );
+        hotel.id( hotelEntity.getId() );
+        hotel.location( hotelEntity.getLocation() );
+        hotel.name( hotelEntity.getName() );
+        hotel.stars( hotelEntity.getStars() );
         hotel.updatedAt( hotelEntity.getUpdatedAt() );
 
         return hotel.build();
@@ -39,11 +39,11 @@ public class HotelMapperImpl implements HotelMapper {
 
         HotelEntity.HotelEntityBuilder hotelEntity = HotelEntity.builder();
 
-        hotelEntity.id( hotel.id() );
-        hotelEntity.name( hotel.name() );
-        hotelEntity.location( hotel.location() );
-        hotelEntity.stars( hotel.stars() );
         hotelEntity.createdAt( hotel.createdAt() );
+        hotelEntity.id( hotel.id() );
+        hotelEntity.location( hotel.location() );
+        hotelEntity.name( hotel.name() );
+        hotelEntity.stars( hotel.stars() );
         hotelEntity.updatedAt( hotel.updatedAt() );
 
         return hotelEntity.build();

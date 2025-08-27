@@ -114,6 +114,15 @@ mvn archetype:generate \
     -DinteractiveMode=false
 ```
 
+## Scm API Server
+```html
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=scm-server \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false
+```
+
 ## Gateway Boilerplate   
 제휴사(partner), 채널(channel), gateway domain, gateway util
 ``` 

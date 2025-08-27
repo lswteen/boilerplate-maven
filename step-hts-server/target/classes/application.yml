@@ -1,5 +1,5 @@
 server:
-  port: 28080
+  port: 18080
 
 spring:
   h2:
@@ -34,7 +34,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     properties:
       dialect: org.hibernate.dialect.H2Dialect
       hibernate:

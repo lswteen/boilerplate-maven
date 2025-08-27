@@ -1,0 +1,79 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+' 참여자 순서를 명시적으로 지정
+participant User
+participant LocaAPP
+participant HTS
+participant TravelPortal
+participant LocaServer
+participant Oauth
+participant Redis
+
+autonumber
+User -> LocaAPP : APP 여행 클릭
+group Loca 영역 인증정보 저장
+    LocaAPP -> TravelPortal: main/login
+    TravelPortal -> LocaServer: API : /app/api/LPMBRSA_A100.lc \nRequest : 트래블(002)
+    LocaServer -> TravelPortal : Response: 사용자 lid 정보(1회성 일련번호)
+    TravelPortal -> LocaServer : API : /app/api/LPMBRSA_A200.lc\nRequest : Lid
+    LocaServer -> TravelPortal : Response: tcno 정보
+    TravelPortal -> Redis : Redis 저장
+end
+
+group HTS 영역 인증정보 저장
+    HTS -> TravelPortal : 회원 정보 조회\nAPI : /partner/user/search\nRequest tcno
+    TravelPortal -> Oauth : 인증 검증
+    Oauth -> Redis : 인증 토큰 검증 조회
+    Redis -> Oauth : 토큰 정보
+    Oauth -> TravelPortal : 토큰정보
+    TravelPortal -> TravelPortal : lid 관련 정보 생성\nRedis 데이터 생성
+    TravelPortal -> Redis : 회원정보 생성
+    Redis -> TravelPortal : 회원정보 200 ok
+    TravelPortal -> HTS : Response: 암호화 payload
+end
+
+group 여행 서비스 시나리오
+
+    group Loca 영역 항공,호텔 리스트 키워드 검색
+        LocaAPP -> TravelPortal : 항공 검색\nAPI : /search/flight/cities/keyword\nRequest : 일본
+        TravelPortal -> LocaAPP : Response : 여행 도시 항공 정보
+        LocaAPP -> TravelPortal : 호텔 검색\nAPI : /search/hotel/cities/keyword\nRequest : 오사카
+        TravelPortal -> LocaAPP : Response : 여행 도시 호텔 정보
+    end
+
+    group HTS 영역 포인트 정보 조회 UNO, EAI, FEP
+        HTS -> TravelPortal : 포인트 조회 UNO 계정계\nAPI : /webhook/points/travelpoint/search
+        TravelPortal -> HTS : Response : 암호화 포인트정보
+
+        HTS -> TravelPortal : 포인트 조회 EAI FEP 롯데맴버스\nAPI : /webhook/points/lpoint/search
+        TravelPortal -> HTS : Response : 암호화 포인트정보
+    end
+
+    group HTS 영역 항공,호텔,렌트 예약
+        HTS -> TravelPortal : 항공 예약\nAPI : /partner/flight/booking
+        TravelPortal -> HTS : Response: 암호화 Payload
+        HTS -> TravelPortal : 호텔 예약\nAPI : /partner/hotel/booking
+        TravelPortal -> HTS : Response: 암호화 Payload
+        HTS -> TravelPortal : 렌트 예약\nAPI : /partner/rentcar/booking
+        TravelPortal -> HTS : Response: 암호화 Payload
+    end
+
+    group HTS 영역 결제하기(결제내역저장)
+        HTS -> TravelPortal : 여행 서비스 결제요청\nAPI : /partner/payment/notify\nRequest
+        TravelPortal -> HTS : Response: 암호화 Payload
+    end
+
+    group HTS 영역 포인트 사용
+        HTS -> TravelPortal : 포인트 사용 요청 UNO 계정계 \nAPI : /webhook/points/travelpoint/burn/\nRequest
+        TravelPortal -> HTS : Response : 예약정보
+        HTS -> TravelPortal : 포인트 사용 요청 EAI FEP 롯데맴버스 \nAPI : /webhook/points/lpoint/burn/\nRequest
+        TravelPortal -> HTS : Response : 예약정보
+    end
+
+    group Loca 영역 사용자 여행 예약 내역 조회
+        LocaAPP -> TravelPortal : 여행 서비스 예약내역조회\nAPI : /my/booking/\nRequest
+        TravelPortal -> LocaAPP : Response : 예약정보
+    end
+end
+@enduml

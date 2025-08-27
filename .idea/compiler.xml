@@ -20,6 +20,7 @@
         </processorPath>
         <module name="channel-gateway" />
         <module name="gateway-util" />
+        <module name="scm-api" />
         <module name="auth-api" />
         <module name="partner-gateway" />
         <module name="gateway-domain" />

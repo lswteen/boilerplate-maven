@@ -1,3 +1,73 @@
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T124738.200.json
+
+###
+
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T124729.200.json
+
+###
+
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T124519.404.json
+
+###
+
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T112806.404.json
+
+###
+
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T112718.404.json
+
+###
+
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T111802.404.json
+
+###
+
+GET http://localhost:9999/api/tour/hotels
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-02-20T110427.404.json
+
+###
+
 POST http://localhost:9999/api/user/login
 Content-Type: application/json
 Content-Length: 53

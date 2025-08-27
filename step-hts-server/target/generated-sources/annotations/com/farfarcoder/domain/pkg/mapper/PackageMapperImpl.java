@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-02-07T14:40:31+0900",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.13 (Amazon.com Inc.)"
+    date = "2025-08-25T14:16:03+0900",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.42.50.v20250729-0351, environment: Java 21.0.8 (Eclipse Adoptium)"
 )
 @Component
 public class PackageMapperImpl implements PackageMapper {
@@ -21,11 +21,11 @@ public class PackageMapperImpl implements PackageMapper {
 
         Pkg.PkgBuilder pkg = Pkg.builder();
 
+        pkg.createdAt( packageEntity.getCreatedAt() );
+        pkg.details( packageEntity.getDetails() );
         pkg.id( packageEntity.getId() );
         pkg.name( packageEntity.getName() );
-        pkg.details( packageEntity.getDetails() );
         pkg.price( packageEntity.getPrice() );
-        pkg.createdAt( packageEntity.getCreatedAt() );
         pkg.updatedAt( packageEntity.getUpdatedAt() );
 
         return pkg.build();
@@ -39,11 +39,11 @@ public class PackageMapperImpl implements PackageMapper {
 
         PackageEntity.PackageEntityBuilder packageEntity = PackageEntity.builder();
 
+        packageEntity.createdAt( pkg.createdAt() );
+        packageEntity.details( pkg.details() );
         packageEntity.id( pkg.id() );
         packageEntity.name( pkg.name() );
-        packageEntity.details( pkg.details() );
         packageEntity.price( pkg.price() );
-        packageEntity.createdAt( pkg.createdAt() );
         packageEntity.updatedAt( pkg.updatedAt() );
 
         return packageEntity.build();

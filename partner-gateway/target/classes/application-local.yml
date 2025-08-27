@@ -27,7 +27,7 @@ spring:
             - Path=
           uri: http://localhost:38080
           filters:
-            - RewritePath=/api/tour/(?<segment>.*), /tour/$\{segment}
+            - RewritePath=/api/tour/(?<segment>.*), /$\{segment}
         - id: user-server
           predicates:
             - Path=
