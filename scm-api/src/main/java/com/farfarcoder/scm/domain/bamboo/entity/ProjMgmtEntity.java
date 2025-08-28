@@ -18,8 +18,8 @@ public class ProjMgmtEntity {
     @Column(name="ID")
     private Long id;
 
-    @Column(name="PROJECT_ID") // PROJECT와의 FK
-    private Long projectId;
+//    @Column(name="PROJECT_ID") // PROJECT와의 FK
+//    private Long projectId;
 
     @Column(name="BIZDIV")
     private String bizDiv;
@@ -70,6 +70,6 @@ public class ProjMgmtEntity {
 
     // PROJECT와 OneToOne 관계
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PROJECT_KEY", insertable = false, updatable = false)
+    @JoinColumn(name = "BAMBOOKEY", referencedColumnName = "PROJECT_KEY", insertable = false, updatable = false)
     private ProjectEntity projectEntity;
 }

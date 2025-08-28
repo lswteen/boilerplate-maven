@@ -7,7 +7,7 @@ import java.time.Instant;
 @Builder(toBuilder = true)
 public record ProjMgmt(
         Long id,
-        Long projectId,
+//        Long projectId,
         String bizDev,
         String bizMgr,
         String config,

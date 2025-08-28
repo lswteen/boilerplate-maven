@@ -52,8 +52,6 @@ public class QProjMgmtEntity extends EntityPathBase<ProjMgmtEntity> {
 
     public final QProjectEntity projectEntity;
 
-    public final NumberPath<Long> projectId = createNumber("projectId", Long.class);
-
     public final StringPath status = createString("status");
 
     public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
