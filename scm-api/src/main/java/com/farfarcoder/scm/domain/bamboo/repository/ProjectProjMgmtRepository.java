@@ -1,7 +1,7 @@
 package com.farfarcoder.scm.domain.bamboo.repository;
 
 import com.farfarcoder.scm.domain.bamboo.entity.ProjectEntity;
-import org.apache.ibatis.annotations.Param;
+import com.farfarcoder.scm.domain.bamboo.model.ProjectProjMgmt;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -18,6 +18,7 @@ public interface ProjectProjMgmtRepository extends JpaRepository<ProjectEntity, 
     @Query("SELECT p FROM projects p " +
             "JOIN FETCH p.projMgmt pm")
     List<ProjectEntity> findAllProjectsWithProjMgmt();
+
 
     /**
      * 특정 projectKey로 Project와 ProjMgmt 매핑 데이터 조회

@@ -7,25 +7,30 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProjectRepository extends JpaRepository<ProjectEntity, Long> {
-    List<ProjectEntity> findByProjectKeyOrderByTitleAsc(String projectKey);
+    /**
+     * 모든 Project를 Build와 함께 조회 (타이틀순 정렬)
+     */
+    @Query("SELECT DISTINCT p FROM projects p " +
+            "LEFT JOIN FETCH p.builds b " +
+            "ORDER BY p.title ASC")
+    List<ProjectEntity> findAllWithBuildsOrderByTitleAsc();
 
-    @Query("SELECT p FROM projects p ORDER BY p.title ASC")
-    List<ProjectEntity> findByAllOrderByTitleAsc();
+    /**
+     * 특정 projectKey로 Project와 Build를 함께 조회
+     */
+    @Query("SELECT p FROM projects p " +
+            "LEFT JOIN FETCH p.builds b " +
+            "WHERE p.projectKey = :projectKey")
+    Optional<ProjectEntity> findByProjectKeyWithBuildsOrderByTitleAsc(@Param("projectKey") String projectKey);
 
-    // PROJMGMT와 함께 조회 (LEFT JOIN)
-    @Query("SELECT p FROM projects p LEFT JOIN FETCH p.projMgmt ORDER BY p.title ASC")
-    List<ProjectEntity> findAllWithProjMgmtOrderByTitleAsc();
-
-    @Query("SELECT p FROM projects p LEFT JOIN FETCH p.projMgmt WHERE p.projectKey = :projectKey ORDER BY p.title ASC")
-    List<ProjectEntity> findByProjectKeyWithProjMgmtOrderByTitleAsc(@Param("projectKey") String projectKey);
-
-    // PROJMGMT가 있는 프로젝트만 조회
-    @Query("SELECT p FROM projects p JOIN p.projMgmt pm ORDER BY p.title ASC")
-    List<ProjectEntity> findProjectsWithProjMgmtOrderByTitleAsc();
-
-    // PROJMGMT가 없는 프로젝트만 조회
-    @Query("SELECT p FROM projects p WHERE p.projMgmt IS NULL ORDER BY p.title ASC")
-    List<ProjectEntity> findProjectsWithoutProjMgmtOrderByTitleAsc();
+    /**
+     * 특정 projectId로 Project와 Build를 함께 조회
+     */
+    @Query("SELECT p FROM projects p " +
+            "LEFT JOIN FETCH p.builds b " +
+            "WHERE p.projectId = :projectId")
+    Optional<ProjectEntity> findByIdWithBuilds(@Param("projectId") Long projectId);
 }

@@ -18,9 +18,6 @@ public class ProjMgmtEntity {
     @Column(name="ID")
     private Long id;
 
-//    @Column(name="PROJECT_ID") // PROJECT와의 FK
-//    private Long projectId;
-
     @Column(name="BIZDIV")
     private String bizDiv;
 

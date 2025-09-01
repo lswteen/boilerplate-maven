@@ -2,19 +2,14 @@ package com.farfarcoder.scm.web.dashboard.controller.dto;
 
 import lombok.Builder;
 
+import java.time.Instant;
+
+/**
+ * ProjMgmt DTO - Entity 매핑 관계 없이 순수 데이터만 전송
+ */
 @Builder(toBuilder = true)
-public record DashboardResponse(
-        Integer levelType,
-        Long projectId,
-        String projectKey,
-        String title,
-        String description,
-        Long buildId,
-        String buildTitle,
-        String buildType,
-        Long buildSeq,
-        // PROJMGMT 필드들 추가
-        String bambooKey,
+public record ProjMgmtDto (
+        Long id,
         String bizDiv,
         String bizMgr,
         String config,
@@ -24,7 +19,11 @@ public record DashboardResponse(
         String bitbucketName,
         String bitbucketKey,
         String bitbucketDesc,
+        String bambooName,
+        String bambooKey,
         String bambooDesc,
-        String deployMgr
-) {
+        String deployMgr,
+        Instant createdAt,
+        Instant updatedAt
+){
 }

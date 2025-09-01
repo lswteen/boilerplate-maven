@@ -29,7 +29,7 @@ public class ProjectProjMgmtController {
 
     @Operation(
             summary = "매핑된 모든 프로젝트-프로젝트관리 조회",
-            description = "Project와 ProjMgmt가 매핑된 모든 데이터를 조회합니다. 82건 "
+            description = "Project와 ProjMgmt가 매핑된 모든 데이터를 조회"
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "조회 성공",
@@ -39,13 +39,12 @@ public class ProjectProjMgmtController {
     @GetMapping
     public ResponseEntity<List<ProjectProjMgmtResponse>> findAllProjectsWithProjMgmt() {
         List<ProjectProjMgmtResponse> responses = projectProjMgmtAppService.findAllProjectsWithProjMgmt();
-        log.info("=========> findAllProjectsWithProjMgmt count : {}", responses.size());
         return ResponseEntity.ok(responses);
     }
 
     @Operation(
-            summary = "프로젝트 키로 매핑 조회",
-            description = "특정 프로젝트 키로 Project와 ProjMgmt 매핑 데이터를 조회합니다."
+            summary = "프로젝트 Key로 매핑 조회",
+            description = "특정 프로젝트 Key로 Project와 ProjMgmt 매핑 데이터를 조회합니다."
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "조회 성공",
@@ -57,8 +56,8 @@ public class ProjectProjMgmtController {
     public ResponseEntity<ProjectProjMgmtResponse> findByProjectKey(
             @Parameter(
                     name = "projectKey",
-                    description = "조회할 프로젝트 키",
-                    example = "DEMO",
+                    description = "조회할 프로젝트 Key",
+                    example = "LCBP",
                     required = true
             )
             @PathVariable("projectKey") String projectKey) {
@@ -83,21 +82,21 @@ public class ProjectProjMgmtController {
     }
 
     @Operation(
-            summary = "밤부 키로 매핑 조회",
-            description = "특정 밤부 키로 Project와 ProjMgmt 매핑 데이터를 조회합니다."
+            summary = "Bamboo Key 매핑 조회",
+            description = "특정 Bamboo Key Project By ProjMgmt 매핑 데이터 조회"
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "조회 성공",
                     content = @Content(mediaType = "application/json",
                             schema = @Schema(implementation = ProjectProjMgmtResponse.class))),
-            @ApiResponse(responseCode = "404", description = "해당 밤부 키를 찾을 수 없음")
+            @ApiResponse(responseCode = "404", description = "해당 Bamboo Key를 찾을 수 없음")
     })
     @GetMapping("/by-bamboo-key/{bambooKey}")
     public ResponseEntity<ProjectProjMgmtResponse> findByBambooKey(
             @Parameter(
                     name = "bambooKey",
-                    description = "조회할 밤부 키",
-                    example = "DEMO",
+                    description = "조회할 Bamboo Key",
+                    example = "LCBP",
                     required = true
             )
             @PathVariable("bambooKey") String bambooKey) {

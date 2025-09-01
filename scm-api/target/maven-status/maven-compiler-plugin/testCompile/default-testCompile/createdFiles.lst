@@ -1,1 +1,3 @@
 com/farfarcoder/ScmApplicationTest.class
+com/farfarcoder/scm/domain/bamboo/service/ProjectProjMgmtServiceTest.class
+com/farfarcoder/scm/domain/bamboo/repository/ProjectProjMgmtRepositoryTest.class
