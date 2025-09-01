@@ -29,7 +29,7 @@ public class ProjectProjMgmtController {
 
     @Operation(
             summary = "매핑된 모든 프로젝트-프로젝트관리 조회",
-            description = "Project와 ProjMgmt가 매핑된 모든 데이터를 조회합니다."
+            description = "Project와 ProjMgmt가 매핑된 모든 데이터를 조회합니다. 82건 "
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "조회 성공",
