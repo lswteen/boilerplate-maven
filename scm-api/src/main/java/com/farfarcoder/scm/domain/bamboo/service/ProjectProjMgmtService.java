@@ -27,12 +27,6 @@ public class ProjectProjMgmtService {
         return projectProjMgmtMapper.toModelList(projectProjMgmtRepository.findAllProjectsWithProjMgmt());
     }
 
-    /**
-     * Project와 ProjMgmt BambooKey 가 'NULL' 고아 레코드 데이터 조회
-     */
-    public List<ProjectProjMgmt> findAllProjectsWithProjMgmtIsNull(){
-        return projectProjMgmtMapper.toModelList(projectProjMgmtRepository.findAllOrphanProjMgmt());
-    }
 
     /**
      * 특정 projectKey로 Project와 ProjMgmt 매핑 데이터 조회

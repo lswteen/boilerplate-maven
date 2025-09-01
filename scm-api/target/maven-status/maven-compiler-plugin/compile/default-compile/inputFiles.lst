@@ -1,5 +1,5 @@
+/Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/web/dashboard/controller/dto/ProjMgmtDto.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/model/ProjectProjMgmt.java
-/Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/dashboard/model/Dashboard.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/config/QueryDslConfig.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/repository/BuildRepository.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/model/Build.java
@@ -8,7 +8,6 @@
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/web/dashboard/mapper/ProjectProjMgmtWebMapper.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/model/Project.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/entity/BuildEntity.java
-/Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/service/BambooService.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/utils/ExcelToSqlGenerator.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/repository/ProjectRepository.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/model/ProjMgmt.java
@@ -16,10 +15,11 @@
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/config/SwaggerConfig.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/ScmApplication.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/web/dashboard/controller/dto/ProjectProjMgmtResponse.java
-/Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/dashboard/service/DashboardService.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/entity/ProjMgmtEntity.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/utils/ExcelToBusinessRiskInsert.java
+/Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/web/dashboard/controller/NullProjMgmtController.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/service/ProjectProjMgmtService.java
+/Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/service/NullProjMgmtService.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/web/dashboard/controller/ProjectProjMgmtController.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/repository/ProjMgmtRepository.java
 /Users/milk/workspace/boilerplate-maven/scm-api/src/main/java/com/farfarcoder/scm/domain/bamboo/entity/ProjectEntity.java
