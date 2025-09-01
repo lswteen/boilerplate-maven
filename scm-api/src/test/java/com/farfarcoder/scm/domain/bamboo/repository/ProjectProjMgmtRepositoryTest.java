@@ -3,6 +3,7 @@ package com.farfarcoder.scm.domain.bamboo.repository;
 import com.farfarcoder.scm.domain.bamboo.entity.ProjMgmtEntity;
 import com.farfarcoder.scm.domain.bamboo.entity.ProjectEntity;
 
+import com.farfarcoder.scm.domain.bamboo.model.ProjectProjMgmt;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,6 +89,7 @@ class ProjectProjMgmtRepositoryTest {
         });
 
     }
+
 
 
     @Test

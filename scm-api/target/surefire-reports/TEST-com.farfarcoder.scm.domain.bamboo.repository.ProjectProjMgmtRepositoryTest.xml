@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="2.045" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="2.265" tests="6" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="KR"/>
     <property name="sun.boot.library.path" value="/Users/milk/Library/Java/JavaVirtualMachines/corretto-17.0.13/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/milk/workspace/boilerplate-maven/scm-api/target/surefire/surefirebooter-20250901145615198_3.jar /Users/milk/workspace/boilerplate-maven/scm-api/target/surefire 2025-09-01T14-56-15_149-jvmRun1 surefire-20250901145615198_1tmp surefire_0-20250901145615198_2tmp"/>
+    <property name="sun.java.command" value="/Users/milk/workspace/boilerplate-maven/scm-api/target/surefire/surefirebooter-20250901151623967_3.jar /Users/milk/workspace/boilerplate-maven/scm-api/target/surefire 2025-09-01T15-16-23_929-jvmRun1 surefire-20250901151623967_1tmp surefire_0-20250901151623967_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/milk/workspace/boilerplate-maven/scm-api/target/test-classes:/Users/milk/workspace/boilerplate-maven/scm-api/target/classes:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.0/spring-boot-starter-web-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.0/spring-boot-starter-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.0/spring-boot-starter-logging-3.4.0.jar:/Users/milk/.m2/repository/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar:/Users/milk/.m2/repository/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar:/Users/milk/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.1/log4j-to-slf4j-2.24.1.jar:/Users/milk/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/milk/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.0/spring-boot-starter-json-3.4.0.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.1/jackson-databind-2.18.1.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.1/jackson-annotations-2.18.1.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.1/jackson-core-2.18.1.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.1/jackson-datatype-jdk8-2.18.1.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.1/jackson-datatype-jsr310-2.18.1.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.1/jackson-module-parameter-names-2.18.1.jar:/Users/milk/.m2/repository/org/springframework/spring-web/6.2.0/spring-web-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-beans/6.2.0/spring-beans-6.2.0.jar:/Users/milk/.m2/repository/io/micrometer/micrometer-observation/1.14.1/micrometer-observation-1.14.1.jar:/Users/milk/.m2/repository/io/micrometer/micrometer-commons/1.14.1/micrometer-commons-1.14.1.jar:/Users/milk/.m2/repository/org/springframework/spring-webmvc/6.2.0/spring-webmvc-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-expression/6.2.0/spring-expression-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.0/spring-boot-starter-tomcat-3.4.0.jar:/Users/milk/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/milk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.33/tomcat-embed-core-10.1.33.jar:/Users/milk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.33/tomcat-embed-el-10.1.33.jar:/Users/milk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.33/tomcat-embed-websocket-10.1.33.jar:/Users/milk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/10.1.33/tomcat-embed-jasper-10.1.33.jar:/Users/milk/.m2/repository/org/eclipse/jdt/ecj/3.33.0/ecj-3.33.0.jar:/Users/milk/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-devtools/3.4.0/spring-boot-devtools-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot/3.4.0/spring-boot-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.0/spring-boot-autoconfigure-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.4.0/spring-boot-starter-aop-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar:/Users/milk/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/milk/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.7.0/springdoc-openapi-starter-webmvc-ui-2.7.0.jar:/Users/milk/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.7.0/springdoc-openapi-starter-webmvc-api-2.7.0.jar:/Users/milk/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.7.0/springdoc-openapi-starter-common-2.7.0.jar:/Users/milk/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.25/swagger-core-jakarta-2.2.25.jar:/Users/milk/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/Users/milk/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.25/swagger-annotations-jakarta-2.2.25.jar:/Users/milk/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.25/swagger-models-jakarta-2.2.25.jar:/Users/milk/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/milk/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.1/jackson-dataformat-yaml-2.18.1.jar:/Users/milk/.m2/repository/org/webjars/swagger-ui/5.18.2/swagger-ui-5.18.2.jar:/Users/milk/.m2/repository/org/webjars/webjars-locator-lite/1.0.1/webjars-locator-lite-1.0.1.jar:/Users/milk/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/milk/.m2/repository/org/hibernate/orm/hibernate-core/6.6.2.Final/hibernate-core-6.6.2.Final.jar:/Users/milk/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/milk/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/milk/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/milk/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/milk/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/milk/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/milk/.m2/repository/net/bytebuddy/byte-buddy/1.15.10/byte-buddy-1.15.10.jar:/Users/milk/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/milk/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/milk/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/milk/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/milk/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/milk/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/milk/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/milk/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/milk/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/milk/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/Users/milk/.m2/repository/commons-codec/commons-codec/1.16.1/commons-codec-1.16.1.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.4.0/spring-boot-starter-data-jpa-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.4.0/spring-boot-starter-jdbc-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/data/spring-data-jpa/3.4.0/spring-data-jpa-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/data/spring-data-commons/3.4.0/spring-data-commons-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/spring-orm/6.2.0/spring-orm-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-tx/6.2.0/spring-tx-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-aspects/6.2.0/spring-aspects-6.2.0.jar:/Users/milk/.m2/repository/org/mybatis/spring/boot/mybatis-spring-boot-starter/3.0.3/mybatis-spring-boot-starter-3.0.3.jar:/Users/milk/.m2/repository/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/3.0.3/mybatis-spring-boot-autoconfigure-3.0.3.jar:/Users/milk/.m2/repository/org/mybatis/mybatis/3.5.14/mybatis-3.5.14.jar:/Users/milk/.m2/repository/org/mybatis/mybatis-spring/3.0.3/mybatis-spring-3.0.3.jar:/Users/milk/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/milk/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/milk/.m2/repository/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar:/Users/milk/.m2/repository/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar:/Users/milk/.m2/repository/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar:/Users/milk/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:/Users/milk/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/milk/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.4.0/spring-boot-starter-test-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-test/3.4.0/spring-boot-test-3.4.0.jar:/Users/milk/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.4.0/spring-boot-test-autoconfigure-3.4.0.jar:/Users/milk/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/milk/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/milk/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/milk/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/milk/.m2/repository/org/assertj/assertj-core/3.26.3/assertj-core-3.26.3.jar:/Users/milk/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/milk/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/milk/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.3/junit-jupiter-5.11.3.jar:/Users/milk/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/Users/milk/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/milk/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/Users/milk/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/milk/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.3/junit-jupiter-params-5.11.3.jar:/Users/milk/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.3/junit-jupiter-engine-5.11.3.jar:/Users/milk/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:/Users/milk/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/Users/milk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.10/byte-buddy-agent-1.15.10.jar:/Users/milk/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/milk/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:/Users/milk/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/milk/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/milk/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-jcl/6.2.0/spring-jcl-6.2.0.jar:/Users/milk/.m2/repository/org/springframework/spring-test/6.2.0/spring-test-6.2.0.jar:/Users/milk/.m2/repository/org/xmlunit/xmlunit-core/2.10.0/xmlunit-core-2.10.0.jar:/Users/milk/.m2/repository/com/querydsl/querydsl-jpa/5.1.0/querydsl-jpa-5.1.0-jakarta.jar:/Users/milk/.m2/repository/com/querydsl/querydsl-core/5.1.0/querydsl-core-5.1.0.jar:/Users/milk/.m2/repository/com/mysema/commons/mysema-commons-lang/0.2.4/mysema-commons-lang-0.2.4.jar:/Users/milk/.m2/repository/com/querydsl/querydsl-apt/5.1.0/querydsl-apt-5.1.0-jakarta.jar:/Users/milk/.m2/repository/com/querydsl/querydsl-codegen/5.1.0/querydsl-codegen-5.1.0.jar:/Users/milk/.m2/repository/com/querydsl/codegen-utils/5.1.0/codegen-utils-5.1.0.jar:/Users/milk/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/milk/.m2/repository/io/github/classgraph/classgraph/4.8.146/classgraph-4.8.146.jar:/Users/milk/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/milk/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/milk/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/milk/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/milk/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar:/Users/milk/.m2/repository/org/apache/poi/poi-ooxml/5.2.5/poi-ooxml-5.2.5.jar:/Users/milk/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.5/poi-ooxml-lite-5.2.5.jar:/Users/milk/.m2/repository/org/apache/xmlbeans/xmlbeans/5.2.0/xmlbeans-5.2.0.jar:/Users/milk/.m2/repository/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.jar:/Users/milk/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/Users/milk/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="/Users/milk/workspace/boilerplate-maven/scm-api/target/surefire/surefirebooter-20250901145615198_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/milk/workspace/boilerplate-maven/scm-api/target/surefire/surefirebooter-20250901151623967_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.13+11-LTS"/>
@@ -51,7 +51,7 @@
     <property name="user.dir" value="/Users/milk/workspace/boilerplate-maven/scm-api"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="10408"/>
+    <property name="PID" value="11219"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/milk/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -64,10 +64,10 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="findProjectWithProjMgmtByProjectKey_NoMapping" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.313">
-    <system-out><![CDATA[14:56:15.565 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest]: ProjectProjMgmtRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:56:15.629 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.farfarcoder.ScmApplication for test class com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest
-14:56:15.666 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+  <testcase name="findProjectWithProjMgmtByProjectKey_NoMapping" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.347">
+    <system-out><![CDATA[15:16:24.383 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest]: ProjectProjMgmtRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:16:24.449 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.farfarcoder.ScmApplication for test class com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest
+15:16:24.488 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -78,38 +78,38 @@
 
  :: Spring Boot ::                (v3.4.0)
 
-2025-09-01T14:56:15.821+09:00  INFO 10408 --- [           main] .f.s.d.b.r.ProjectProjMgmtRepositoryTest : Starting ProjectProjMgmtRepositoryTest using Java 17.0.13 with PID 10408 (started by milk in /Users/milk/workspace/boilerplate-maven/scm-api)
-2025-09-01T14:56:15.822+09:00  INFO 10408 --- [           main] .f.s.d.b.r.ProjectProjMgmtRepositoryTest : The following 1 profile is active: "test"
-2025-09-01T14:56:15.970+09:00  INFO 10408 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-01T14:56:16.001+09:00  INFO 10408 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
-2025-09-01T14:56:16.026+09:00  INFO 10408 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
-2025-09-01T14:56:16.092+09:00  INFO 10408 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:9b83da27-d4e0-4641-b7e7-4ad335d6e957;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2025-09-01T14:56:16.204+09:00  INFO 10408 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-01T14:56:16.232+09:00  INFO 10408 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
-2025-09-01T14:56:16.253+09:00  INFO 10408 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-01T14:56:16.370+09:00  INFO 10408 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-01T14:56:16.410+09:00  INFO 10408 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@1fcaea93']
+2025-09-01T15:16:24.664+09:00  INFO 11219 --- [           main] .f.s.d.b.r.ProjectProjMgmtRepositoryTest : Starting ProjectProjMgmtRepositoryTest using Java 17.0.13 with PID 11219 (started by milk in /Users/milk/workspace/boilerplate-maven/scm-api)
+2025-09-01T15:16:24.665+09:00  INFO 11219 --- [           main] .f.s.d.b.r.ProjectProjMgmtRepositoryTest : The following 1 profile is active: "test"
+2025-09-01T15:16:24.833+09:00  INFO 11219 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-01T15:16:24.863+09:00  INFO 11219 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2025-09-01T15:16:24.889+09:00  INFO 11219 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2025-09-01T15:16:24.959+09:00  INFO 11219 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:4a985c9a-b410-481a-826c-b3ce10365dc6;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-01T15:16:25.083+09:00  INFO 11219 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-01T15:16:25.119+09:00  INFO 11219 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-09-01T15:16:25.134+09:00  INFO 11219 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-01T15:16:25.277+09:00  INFO 11219 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-01T15:16:25.318+09:00  INFO 11219 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@68e47e7']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-09-01T14:56:16.778+09:00  INFO 10408 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-09-01T14:56:16.784+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.716+09:00  INFO 11219 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-01T15:16:25.721+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     drop table if exists public.build cascade 
 Hibernate: 
     drop table if exists public.build cascade 
-2025-09-01T14:56:16.785+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.723+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     drop table if exists public.project cascade 
 Hibernate: 
     drop table if exists public.project cascade 
-2025-09-01T14:56:16.786+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.723+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     drop table if exists public.projmgmt cascade 
 Hibernate: 
     drop table if exists public.projmgmt cascade 
-2025-09-01T14:56:16.788+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.725+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     create table public.build (
         build_id bigint generated by default as identity,
         created_at timestamp(6) with time zone,
@@ -129,7 +129,7 @@ Hibernate:
         build_type varchar(255),
         primary key (build_id)
     )
-2025-09-01T14:56:16.792+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.729+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     create table public.project (
         project_id bigint generated by default as identity,
         description varchar(255),
@@ -145,7 +145,7 @@ Hibernate:
         title varchar(255),
         primary key (project_id)
     )
-2025-09-01T14:56:16.793+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.730+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     create table public.projmgmt (
         createdat timestamp(6) with time zone,
         id bigint generated by default as identity,
@@ -185,7 +185,7 @@ Hibernate:
         status varchar(255),
         primary key (id)
     )
-2025-09-01T14:56:16.794+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.731+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     alter table if exists public.build 
        add constraint FK54gngpyfvuk6h9p17d25e404m 
        foreign key (project_id) 
@@ -195,7 +195,7 @@ Hibernate:
        add constraint FK54gngpyfvuk6h9p17d25e404m 
        foreign key (project_id) 
        references public.project
-2025-09-01T14:56:16.799+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.736+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     alter table if exists public.projmgmt 
        add constraint FKff6yhwrfy3wx9eyusetr3ylb 
        foreign key (bambookey) 
@@ -205,10 +205,10 @@ Hibernate:
        add constraint FKff6yhwrfy3wx9eyusetr3ylb 
        foreign key (bambookey) 
        references public.project (project_key)
-2025-09-01T14:56:16.801+09:00  INFO 10408 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-01T14:56:16.905+09:00  INFO 10408 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-09-01T14:56:17.165+09:00  INFO 10408 --- [           main] .f.s.d.b.r.ProjectProjMgmtRepositoryTest : Started ProjectProjMgmtRepositoryTest in 1.503 seconds (process running for 1.922)
-2025-09-01T14:56:17.417+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:25.738+09:00  INFO 11219 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-01T15:16:25.868+09:00  INFO 11219 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-01T15:16:26.134+09:00  INFO 11219 --- [           main] .f.s.d.b.r.ProjectProjMgmtRepositoryTest : Started ProjectProjMgmtRepositoryTest in 1.651 seconds (process running for 2.115)
+2025-09-01T15:16:26.411+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.project
@@ -222,7 +222,7 @@ Hibernate:
         (description, project_key, title, project_id) 
     values
         (?, ?, ?, default)
-2025-09-01T14:56:17.451+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.445+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     SELECT
         p.* 
     FROM
@@ -244,8 +244,64 @@ Hibernate:
         p.project_key = ?
 ]]></system-out>
   </testcase>
-  <testcase name="findProjectWithProjMgmtByBambooKey_Success" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.016">
-    <system-out><![CDATA[2025-09-01T14:56:17.483+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+  <testcase name="findAllOrphanProjMgmt" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.015">
+    <error message="could not execute statement [Referential integrity constraint violation: &quot;FKFF6YHWRFY3WX9EYUSETR3YLB: PUBLIC.PROJMGMT FOREIGN KEY(BAMBOOKEY) REFERENCES PUBLIC.PROJECT(PROJECT_KEY) (&apos;NULL&apos;)&quot;; SQL statement:&#10;insert into public.projmgmt (bamboodesc,bambookey,bambooname,bitbucketdesc,bitbucketkey,bitbucketname,bizdiv,bizmgr,config,createdat,deploymgr,dev,oper,status,updatedat,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [23506-232]] [insert into public.projmgmt (bamboodesc,bambookey,bambooname,bitbucketdesc,bitbucketkey,bitbucketname,bizdiv,bizmgr,config,createdat,deploymgr,dev,oper,status,updatedat,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default)]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+could not execute statement [Referential integrity constraint violation: "FKFF6YHWRFY3WX9EYUSETR3YLB: PUBLIC.PROJMGMT FOREIGN KEY(BAMBOOKEY) REFERENCES PUBLIC.PROJECT(PROJECT_KEY) ('NULL')"; SQL statement:
+insert into public.projmgmt (bamboodesc,bambookey,bambooname,bitbucketdesc,bitbucketkey,bitbucketname,bizdiv,bizmgr,config,createdat,deploymgr,dev,oper,status,updatedat,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [23506-232]] [insert into public.projmgmt (bamboodesc,bambookey,bambooname,bitbucketdesc,bitbucketkey,bitbucketname,bizdiv,bizmgr,config,createdat,deploymgr,dev,oper,status,updatedat,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:393)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:307)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:223)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager.persist(TestEntityManager.java:92)
+	at org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager.persistAndFlush(TestEntityManager.java:130)
+	at com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest.findAllOrphanProjMgmt(ProjectProjMgmtRepositoryTest.java:105)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKFF6YHWRFY3WX9EYUSETR3YLB: PUBLIC.PROJMGMT FOREIGN KEY(BAMBOOKEY) REFERENCES PUBLIC.PROJECT(PROJECT_KEY) ('NULL')"; SQL statement:
+insert into public.projmgmt (bamboodesc,bambookey,bambooname,bitbucketdesc,bitbucketkey,bitbucketname,bizdiv,bizmgr,config,createdat,deploymgr,dev,oper,status,updatedat,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [23506-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRowOwnTable(ConstraintReferential.java:308)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:249)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:188)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:212)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 28 more
+]]></error>
+    <system-out><![CDATA[2025-09-01T15:16:26.488+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.project
@@ -259,7 +315,7 @@ Hibernate:
         (description, project_key, title, project_id) 
     values
         (?, ?, ?, default)
-2025-09-01T14:56:17.484+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.490+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.projmgmt
@@ -273,7 +329,41 @@ Hibernate:
         (bamboodesc, bambookey, bambooname, bitbucketdesc, bitbucketkey, bitbucketname, bizdiv, bizmgr, config, createdat, deploymgr, dev, oper, status, updatedat, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-09-01T14:56:17.488+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.495+09:00  WARN 11219 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23506, SQLState: 23506
+2025-09-01T15:16:26.495+09:00 ERROR 11219 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Referential integrity constraint violation: "FKFF6YHWRFY3WX9EYUSETR3YLB: PUBLIC.PROJMGMT FOREIGN KEY(BAMBOOKEY) REFERENCES PUBLIC.PROJECT(PROJECT_KEY) ('NULL')"; SQL statement:
+insert into public.projmgmt (bamboodesc,bambookey,bambooname,bitbucketdesc,bitbucketkey,bitbucketname,bizdiv,bizmgr,config,createdat,deploymgr,dev,oper,status,updatedat,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [23506-232]
+]]></system-out>
+  </testcase>
+  <testcase name="findProjectWithProjMgmtByBambooKey_Success" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.017">
+    <system-out><![CDATA[2025-09-01T15:16:26.504+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.project
+        (description, project_key, title, project_id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        public.project
+        (description, project_key, title, project_id) 
+    values
+        (?, ?, ?, default)
+2025-09-01T15:16:26.505+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.projmgmt
+        (bamboodesc, bambookey, bambooname, bitbucketdesc, bitbucketkey, bitbucketname, bizdiv, bizmgr, config, createdat, deploymgr, dev, oper, status, updatedat, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        public.projmgmt
+        (bamboodesc, bambookey, bambooname, bitbucketdesc, bitbucketkey, bitbucketname, bizdiv, bizmgr, config, createdat, deploymgr, dev, oper, status, updatedat, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-09-01T15:16:26.507+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     SELECT
         p.* 
     FROM
@@ -293,7 +383,7 @@ Hibernate:
             ON p.project_key = pm.bambookey 
     WHERE
         pm.bambookey = ?
-2025-09-01T14:56:17.492+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.511+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     select
         pme1_0.id,
         pme1_0.bamboodesc,
@@ -337,7 +427,7 @@ Hibernate:
         public.projmgmt pme1_0 
     where
         pme1_0.bambookey=?
-2025-09-01T14:56:17.493+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.514+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     select
         pe1_0.project_id,
         pe1_0.description,
@@ -360,7 +450,7 @@ Hibernate:
 ]]></system-out>
   </testcase>
   <testcase name="findProjectWithProjMgmtByBambooKey_NotFound" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.004">
-    <system-out><![CDATA[2025-09-01T14:56:17.499+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+    <system-out><![CDATA[2025-09-01T15:16:26.522+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     SELECT
         p.* 
     FROM
@@ -382,8 +472,8 @@ Hibernate:
         pm.bambookey = ?
 ]]></system-out>
   </testcase>
-  <testcase name="findAllProjectsWithProjMgmt" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.028">
-    <system-out><![CDATA[2025-09-01T14:56:17.502+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+  <testcase name="findAllProjectsWithProjMgmt" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.029">
+    <system-out><![CDATA[2025-09-01T15:16:26.527+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.project
@@ -397,7 +487,7 @@ Hibernate:
         (description, project_key, title, project_id) 
     values
         (?, ?, ?, default)
-2025-09-01T14:56:17.504+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.529+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.projmgmt
@@ -411,7 +501,7 @@ Hibernate:
         (bamboodesc, bambookey, bambooname, bitbucketdesc, bitbucketkey, bitbucketname, bizdiv, bizmgr, config, createdat, deploymgr, dev, oper, status, updatedat, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-09-01T14:56:17.504+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.529+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.project
@@ -425,7 +515,7 @@ Hibernate:
         (description, project_key, title, project_id) 
     values
         (?, ?, ?, default)
-2025-09-01T14:56:17.505+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.530+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.projmgmt
@@ -439,7 +529,7 @@ Hibernate:
         (bamboodesc, bambookey, bambooname, bitbucketdesc, bitbucketkey, bitbucketname, bizdiv, bizmgr, config, createdat, deploymgr, dev, oper, status, updatedat, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-09-01T14:56:17.506+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.530+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.project
@@ -453,7 +543,7 @@ Hibernate:
         (description, project_key, title, project_id) 
     values
         (?, ?, ?, default)
-2025-09-01T14:56:17.523+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.548+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     select
         pe1_0.project_id,
         pe1_0.description,
@@ -509,8 +599,8 @@ Hibernate:
             on pe1_0.project_key=pm1_0.bambookey
 ]]></system-out>
   </testcase>
-  <testcase name="findProjectWithProjMgmtByProjectKey_Success" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.005">
-    <system-out><![CDATA[2025-09-01T14:56:17.531+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+  <testcase name="findProjectWithProjMgmtByProjectKey_Success" classname="com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepositoryTest" time="0.006">
+    <system-out><![CDATA[2025-09-01T15:16:26.557+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.project
@@ -524,7 +614,7 @@ Hibernate:
         (description, project_key, title, project_id) 
     values
         (?, ?, ?, default)
-2025-09-01T14:56:17.532+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.558+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         public.projmgmt
@@ -538,7 +628,7 @@ Hibernate:
         (bamboodesc, bambookey, bambooname, bitbucketdesc, bitbucketkey, bitbucketname, bizdiv, bizmgr, config, createdat, deploymgr, dev, oper, status, updatedat, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-09-01T14:56:17.533+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.559+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     SELECT
         p.* 
     FROM
@@ -558,7 +648,7 @@ Hibernate:
             ON p.project_key = pm.bambookey 
     WHERE
         p.project_key = ?
-2025-09-01T14:56:17.533+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.560+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     select
         pme1_0.id,
         pme1_0.bamboodesc,
@@ -602,7 +692,7 @@ Hibernate:
         public.projmgmt pme1_0 
     where
         pme1_0.bambookey=?
-2025-09-01T14:56:17.534+09:00 DEBUG 10408 --- [           main] org.hibernate.SQL                        : 
+2025-09-01T15:16:26.560+09:00 DEBUG 11219 --- [           main] org.hibernate.SQL                        : 
     select
         pe1_0.project_id,
         pe1_0.description,

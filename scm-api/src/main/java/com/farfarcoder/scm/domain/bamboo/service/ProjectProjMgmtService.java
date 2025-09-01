@@ -24,18 +24,20 @@ public class ProjectProjMgmtService {
      * Project와 ProjMgmt가 매핑된 모든 데이터 조회
      */
     public List<ProjectProjMgmt> findAllProjectsWithProjMgmt() {
-        log.debug("Finding all projects with projmgmt mapping");
+        return projectProjMgmtMapper.toModelList(projectProjMgmtRepository.findAllProjectsWithProjMgmt());
+    }
 
-        List<ProjectEntity> projectEntities = projectProjMgmtRepository.findAllProjectsWithProjMgmt();
-        return projectProjMgmtMapper.toModelList(projectEntities);
+    /**
+     * Project와 ProjMgmt BambooKey 가 'NULL' 고아 레코드 데이터 조회
+     */
+    public List<ProjectProjMgmt> findAllProjectsWithProjMgmtIsNull(){
+        return projectProjMgmtMapper.toModelList(projectProjMgmtRepository.findAllOrphanProjMgmt());
     }
 
     /**
      * 특정 projectKey로 Project와 ProjMgmt 매핑 데이터 조회
      */
     public Optional<ProjectProjMgmt> findProjectWithProjMgmtByProjectKey(String projectKey) {
-        log.debug("Finding project with projmgmt mapping by projectKey: {}", projectKey);
-
         return projectProjMgmtRepository.findProjectWithProjMgmtByProjectKey(projectKey)
                 .map(projectProjMgmtMapper::toModel);
     }
@@ -44,8 +46,6 @@ public class ProjectProjMgmtService {
      * 특정 bambooKey로 Project와 ProjMgmt 매핑 데이터 조회
      */
     public Optional<ProjectProjMgmt> findProjectWithProjMgmtByBambooKey(String bambooKey) {
-        log.debug("Finding project with projmgmt mapping by bambooKey: {}", bambooKey);
-
         return projectProjMgmtRepository.findProjectWithProjMgmtByBambooKey(bambooKey)
                 .map(projectProjMgmtMapper::toModel);
     }

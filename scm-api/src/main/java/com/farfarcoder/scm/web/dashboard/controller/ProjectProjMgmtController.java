@@ -39,7 +39,6 @@ public class ProjectProjMgmtController {
     @GetMapping
     public ResponseEntity<List<ProjectProjMgmtResponse>> findAllProjectsWithProjMgmt() {
         List<ProjectProjMgmtResponse> responses = projectProjMgmtAppService.findAllProjectsWithProjMgmt();
-        log.info("=========> findAllProjectsWithProjMgmt count : {}", responses.size());
         return ResponseEntity.ok(responses);
     }
 
@@ -58,7 +57,7 @@ public class ProjectProjMgmtController {
             @Parameter(
                     name = "projectKey",
                     description = "조회할 프로젝트 Key",
-                    example = "DEMO",
+                    example = "LCBP",
                     required = true
             )
             @PathVariable("projectKey") String projectKey) {
@@ -97,7 +96,7 @@ public class ProjectProjMgmtController {
             @Parameter(
                     name = "bambooKey",
                     description = "조회할 Bamboo Key",
-                    example = "DEMO",
+                    example = "LCBP",
                     required = true
             )
             @PathVariable("bambooKey") String bambooKey) {
