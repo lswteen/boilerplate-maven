@@ -1,7 +1,6 @@
 package com.farfarcoder.scm.domain.bamboo.repository;
 
 import com.farfarcoder.scm.domain.bamboo.entity.ProjMgmtEntity;
-import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
