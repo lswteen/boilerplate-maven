@@ -1,4 +1,4 @@
-package com.farfarcoder.scm.utils;
+package com.farfarcoder.scm.utils.exceltosql;
 
 import org.apache.poi.ss.usermodel.*;
 

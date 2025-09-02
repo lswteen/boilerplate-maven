@@ -16,7 +16,7 @@ public record ProjectBuildResponse(
         List<BuildResponse> builds
 ) {
     @Builder(toBuilder = true)
-    public static record BuildResponse(
+    public record BuildResponse(
             Long buildId,
             Long projectId,
             String buildTitle,
