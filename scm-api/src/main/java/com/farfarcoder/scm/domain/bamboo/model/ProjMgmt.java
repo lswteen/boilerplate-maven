@@ -8,7 +8,7 @@ import java.time.Instant;
 public record ProjMgmt(
         Long id,
 //        Long projectId,
-        String bizDev,
+        String bizDiv,
         String bizMgr,
         String config,
         String dev,

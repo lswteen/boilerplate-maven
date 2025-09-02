@@ -1,8 +1,10 @@
 package com.farfarcoder.scm.web.dashboard.service;
 
+import com.farfarcoder.scm.domain.bamboo.model.Project;
 import com.farfarcoder.scm.domain.bamboo.model.ProjectProjMgmt;
 import com.farfarcoder.scm.domain.bamboo.service.ProjectProjMgmtService;
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectProjMgmtResponse;
+import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectResponse;
 import com.farfarcoder.scm.web.dashboard.mapper.ProjectProjMgmtWebMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +29,16 @@ public class ProjectProjMgmtAppService {
 
         List<ProjectProjMgmt> projectProjMgmts = projectProjMgmtService.findAllProjectsWithProjMgmt();
         return projectProjMgmtWebMapper.toResponseList(projectProjMgmts);
+    }
+
+    /**
+     * ProjMgmt와 매핑되지 않은 모든 Project 조회
+     * Project 테이블 총 104개 중 매핑된 82개를 제외한 나머지 조회
+     */
+    public List<ProjectResponse> findProjectsNotMappedToProjMgmt() {
+        log.info("Request to find projects not mapped to projmgmt");
+        List<Project> projects = projectProjMgmtService.findProjectsNotMappedToProjMgmt();
+        return projectProjMgmtWebMapper.toProjectResponseList(projects);
     }
 
     /**
