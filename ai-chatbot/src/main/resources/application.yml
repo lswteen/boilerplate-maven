@@ -5,15 +5,22 @@ spring:
   application:
     name: ai-chatbot
 
-  # Spring AI OpenAI 설정
+  # Spring AI OpenAI 설정 (공식 문서 방식)
   ai:
     openai:
-      api-key: ${OPENAI_API_KEY:your-api-key-here}
+      api-key: ${OPENAI_API_KEY:demo} # 환경변수로 설정 (기본값: demo - 테스트용)
       chat:
         options:
           model: gpt-3.5-turbo
           temperature: 0.7
           max-tokens: 1000
+    # Ollama 로컬 설정 (OpenAI 대안)
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        enabled: false # 처음엔 비활성화, 필요시 활성화
+        options:
+          model: llama2
 
 # 로깅 설정
 #logging:
