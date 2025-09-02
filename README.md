@@ -146,7 +146,7 @@ mvn archetype:generate \
 
 mvn archetype:generate \
     -DgroupId=com.farfarcoder \
-    -DartifactId=gateway-util \
+    -DartifactId=ai-chatbot \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false           
 ```

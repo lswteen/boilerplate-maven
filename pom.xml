@@ -16,6 +16,7 @@
     <module>web-common</module>
     <module>channel-gateway</module>
     <module>scm-api</module>
+    <module>ai-chatbot</module>
   </modules>
   <!-- 공통 프로퍼티 관리 -->
   <properties>
@@ -104,7 +105,6 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
-
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
@@ -124,8 +124,6 @@
             </execution>
           </executions>
         </plugin>
-
-
       </plugins>
     </pluginManagement>
   </build>
