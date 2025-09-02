@@ -1,7 +1,9 @@
 package com.farfarcoder.scm.domain.bamboo.service;
 
 import com.farfarcoder.scm.domain.bamboo.entity.ProjectEntity;
+import com.farfarcoder.scm.domain.bamboo.mapper.ProjectMapper;
 import com.farfarcoder.scm.domain.bamboo.mapper.ProjectProjMgmtMapper;
+import com.farfarcoder.scm.domain.bamboo.model.Project;
 import com.farfarcoder.scm.domain.bamboo.model.ProjectProjMgmt;
 import com.farfarcoder.scm.domain.bamboo.repository.ProjectProjMgmtRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +21,7 @@ import java.util.Optional;
 public class ProjectProjMgmtService {
     private final ProjectProjMgmtRepository projectProjMgmtRepository;
     private final ProjectProjMgmtMapper projectProjMgmtMapper;
+    private final ProjectMapper projectMapper;
 
     /**
      * Project와 ProjMgmt가 매핑된 모든 데이터 조회
@@ -27,6 +30,31 @@ public class ProjectProjMgmtService {
         return projectProjMgmtMapper.toModelList(projectProjMgmtRepository.findAllProjectsWithProjMgmt());
     }
 
+    /**
+     * ProjMgmt와 매핑되지 않은 모든 Project 조회
+     * Project 테이블 총 104개 중 매핑된 82개를 제외한 나머지 조회
+     */
+    public List<Project> findProjectsNotMappedToProjMgmt() {
+        log.info("Finding projects not mapped to projmgmt");
+
+        List<ProjectEntity> projectEntities = projectProjMgmtRepository.findProjectsNotMappedToProjMgmt();
+        List<Project> result = projectMapper.toModelList(projectEntities);
+
+        log.info("Found {} projects not mapped to projmgmt", result.size());
+        return result;
+    }
+
+    /**
+     * ProjMgmt와 매핑되지 않은 Project 개수 조회
+     */
+    public Long countProjectsNotMappedToProjMgmt() {
+        log.info("Counting projects not mapped to projmgmt");
+
+        Long count = projectProjMgmtRepository.countProjectsNotMappedToProjMgmt();
+
+        log.info("Count of projects not mapped to projmgmt: {}", count);
+        return count;
+    }
 
     /**
      * 특정 projectKey로 Project와 ProjMgmt 매핑 데이터 조회

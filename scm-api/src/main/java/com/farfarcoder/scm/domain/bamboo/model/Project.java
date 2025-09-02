@@ -10,7 +10,7 @@ public record Project(
         String projectKey,
         String title,
         String description,
-
+        ProjMgmt projMgmt,
         Collection<Build> builds
 ) {
 }

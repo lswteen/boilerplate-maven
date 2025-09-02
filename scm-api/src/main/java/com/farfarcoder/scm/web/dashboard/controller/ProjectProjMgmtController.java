@@ -1,9 +1,11 @@
 package com.farfarcoder.scm.web.dashboard.controller;
 
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectProjMgmtResponse;
+import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectResponse;
 import com.farfarcoder.scm.web.dashboard.service.ProjectProjMgmtAppService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -39,6 +41,25 @@ public class ProjectProjMgmtController {
     @GetMapping
     public ResponseEntity<List<ProjectProjMgmtResponse>> findAllProjectsWithProjMgmt() {
         List<ProjectProjMgmtResponse> responses = projectProjMgmtAppService.findAllProjectsWithProjMgmt();
+        return ResponseEntity.ok(responses);
+    }
+
+    @Operation(
+            summary = "매핑되지 않은 프로젝트 전체 조회",
+            description = "ProjMgmt와 매핑되지 않은 Project 데이터를 조회합니다. (총 104개 중 82개 매핑된 것을 제외한 나머지)"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "조회 성공",
+                    content = @Content(mediaType = "application/json",
+                            array = @ArraySchema(schema = @Schema(implementation = ProjectResponse.class))))
+    })
+    @GetMapping("/unmapped")
+    public ResponseEntity<List<ProjectResponse>> findProjectsNotMappedToProjMgmt() {
+        log.info("Request to find projects not mapped to projmgmt");
+
+        List<ProjectResponse> responses = projectProjMgmtAppService.findProjectsNotMappedToProjMgmt();
+
+        log.info("Found {} projects not mapped to projmgmt", responses.size());
         return ResponseEntity.ok(responses);
     }
 
