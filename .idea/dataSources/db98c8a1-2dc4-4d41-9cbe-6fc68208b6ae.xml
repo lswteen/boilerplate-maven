@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="scm">
-  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.53">
+  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.51">
     <root id="1">
-      <ServerVersion>2.3.232</ServerVersion>
+      <ServerVersion>2.2.220</ServerVersion>
     </root>
     <database id="2" parent="1" name="SCM">
       <Current>1</Current>
@@ -160,7 +160,7 @@
     <collation id="153" parent="2" name="THAI_THAILAND"/>
     <collation id="154" parent="2" name="THAI_THAILAND_TH"/>
     <collation id="155" parent="2" name="TURKISH"/>
-    <collation id="156" parent="2" name="TURKISH_TÜRKIYE"/>
+    <collation id="156" parent="2" name="TURKISH_TURKEY"/>
     <collation id="157" parent="2" name="UKRAINIAN"/>
     <collation id="158" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="159" parent="2" name="VIETNAMESE"/>
@@ -169,7 +169,7 @@
     <schema id="162" parent="2" name="INFORMATION_SCHEMA"/>
     <schema id="163" parent="2" name="PUBLIC">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-08-28.02:08:43</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-09-02.13:01:25</LastIntrospectionLocalTimestamp>
     </schema>
     <user id="164" parent="2" name="SA">
       <Admin>1</Admin>
@@ -179,35 +179,35 @@
     <table id="167" parent="163" name="PROJECT"/>
     <table id="168" parent="163" name="PROJMGMT"/>
     <column id="169" parent="165" name="BUILD_ID">
+      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>BIGINT|0s</StoredType>
     </column>
     <column id="170" parent="165" name="PROJECT_ID">
+      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>BIGINT|0s</StoredType>
     </column>
     <column id="171" parent="165" name="BUILD_TITLE">
+      <DasType>CHARACTER VARYING(500)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>CHARACTER VARYING(500)|0s</StoredType>
     </column>
     <column id="172" parent="165" name="BUILD_TYPE">
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <DefaultExpression>&apos;CHAIN&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="173" parent="165" name="CREATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
-      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="174" parent="165" name="UPDATED_AT">
+      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>6</Position>
-      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <index id="175" parent="165" name="PRIMARY_KEY_3">
       <ColNames>BUILD_ID</ColNames>
@@ -221,78 +221,78 @@
     </key>
     <column id="177" parent="166" name="ID">
       <ColumnKind>generated-stored</ColumnKind>
+      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>BIGINT|0s</StoredType>
       <SequenceInline>1</SequenceInline>
+      <SequenceDasType>BIGINT|0s</SequenceDasType>
       <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
       <SequenceStartValue>1</SequenceStartValue>
-      <SequenceStoredType>BIGINT|0s</SequenceStoredType>
     </column>
     <column id="178" parent="166" name="GUBUN">
       <Comment>구분</Comment>
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="179" parent="166" name="BUSINESS">
       <Comment>업무</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="180" parent="166" name="SYSTEM">
       <Comment>시스템</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <Position>4</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="181" parent="166" name="DETAIL_BUSINESS">
       <Comment>상세업무</Comment>
+      <DasType>CHARACTER VARYING(200)|0s</DasType>
       <Position>5</Position>
-      <StoredType>CHARACTER VARYING(200)|0s</StoredType>
     </column>
     <column id="182" parent="166" name="DEPT">
       <Comment>담당부서</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <Position>6</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="183" parent="166" name="OPER_DEPT">
       <Comment>운영담당부서</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <Position>7</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="184" parent="166" name="CONFIG">
       <Comment>형상</Comment>
+      <DasType>CHARACTER(10)|0s</DasType>
       <Position>8</Position>
-      <StoredType>CHARACTER(10)|0s</StoredType>
     </column>
     <column id="185" parent="166" name="DEV">
       <Comment>개발</Comment>
+      <DasType>CHARACTER(10)|0s</DasType>
       <Position>9</Position>
-      <StoredType>CHARACTER(10)|0s</StoredType>
     </column>
     <column id="186" parent="166" name="OPER">
       <Comment>운영</Comment>
+      <DasType>CHARACTER(10)|0s</DasType>
       <Position>10</Position>
-      <StoredType>CHARACTER(10)|0s</StoredType>
     </column>
     <column id="187" parent="166" name="REMARKS">
       <Comment>비고</Comment>
+      <DasType>CHARACTER VARYING(500)|0s</DasType>
       <Position>11</Position>
-      <StoredType>CHARACTER VARYING(500)|0s</StoredType>
     </column>
     <column id="188" parent="166" name="CREATED_AT">
       <Comment>생성일시</Comment>
+      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>12</Position>
-      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="189" parent="166" name="UPDATED_AT">
       <Comment>수정일시</Comment>
+      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>13</Position>
-      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <index id="190" parent="166" name="PRIMARY_KEY_E">
       <ColNames>ID</ColNames>
@@ -305,21 +305,21 @@
       <Primary>1</Primary>
     </key>
     <column id="192" parent="167" name="PROJECT_ID">
+      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>BIGINT|0s</StoredType>
     </column>
     <column id="193" parent="167" name="PROJECT_KEY">
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <Position>2</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="194" parent="167" name="TITLE">
+      <DasType>CHARACTER VARYING(255)|0s</DasType>
       <Position>3</Position>
-      <StoredType>CHARACTER VARYING(255)|0s</StoredType>
     </column>
     <column id="195" parent="167" name="DESCRIPTION">
+      <DasType>CHARACTER VARYING|0s</DasType>
       <Position>4</Position>
-      <StoredType>CHARACTER VARYING|0s</StoredType>
     </column>
     <index id="196" parent="167" name="PRIMARY_KEY_1">
       <ColNames>PROJECT_ID</ColNames>
@@ -333,92 +333,92 @@
     </key>
     <column id="198" parent="168" name="ID">
       <ColumnKind>generated-stored</ColumnKind>
+      <DasType>BIGINT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>BIGINT|0s</StoredType>
       <SequenceInline>1</SequenceInline>
+      <SequenceDasType>BIGINT|0s</SequenceDasType>
       <SequenceSequenceIdentity>1(1)</SequenceSequenceIdentity>
       <SequenceStartValue>1</SequenceStartValue>
-      <SequenceStoredType>BIGINT|0s</SequenceStoredType>
     </column>
     <column id="199" parent="168" name="BIZDIV">
       <Comment>업무구분</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="200" parent="168" name="BIZMGR">
       <Comment>업무담당자</Comment>
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <Position>3</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="201" parent="168" name="CONFIG">
       <Comment>형상</Comment>
+      <DasType>CHARACTER VARYING(10)|0s</DasType>
       <Position>4</Position>
-      <StoredType>CHARACTER VARYING(10)|0s</StoredType>
     </column>
     <column id="202" parent="168" name="DEV">
       <Comment>개발</Comment>
+      <DasType>CHARACTER VARYING(10)|0s</DasType>
       <Position>5</Position>
-      <StoredType>CHARACTER VARYING(10)|0s</StoredType>
     </column>
     <column id="203" parent="168" name="OPER">
       <Comment>운영</Comment>
+      <DasType>CHARACTER VARYING(10)|0s</DasType>
       <Position>6</Position>
-      <StoredType>CHARACTER VARYING(10)|0s</StoredType>
     </column>
     <column id="204" parent="168" name="STATUS">
       <Comment>상태</Comment>
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <Position>7</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="205" parent="168" name="BITBUCKETNAME">
       <Comment>BitbucketName</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <Position>8</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="206" parent="168" name="BITBUCKETKEY">
       <Comment>BitbucketKey</Comment>
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <Position>9</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="207" parent="168" name="BITBUCKETDESC">
       <Comment>BitbucketDescription</Comment>
+      <DasType>CHARACTER VARYING(250)|0s</DasType>
       <Position>10</Position>
-      <StoredType>CHARACTER VARYING(250)|0s</StoredType>
     </column>
     <column id="208" parent="168" name="BAMBOONAME">
       <Comment>BambooName</Comment>
+      <DasType>CHARACTER VARYING(100)|0s</DasType>
       <Position>11</Position>
-      <StoredType>CHARACTER VARYING(100)|0s</StoredType>
     </column>
     <column id="209" parent="168" name="BAMBOOKEY">
       <Comment>BambooKey</Comment>
+      <DasType>CHARACTER VARYING(50)|0s</DasType>
       <Position>12</Position>
-      <StoredType>CHARACTER VARYING(50)|0s</StoredType>
     </column>
     <column id="210" parent="168" name="BAMBOODESC">
       <Comment>BambooDescription</Comment>
+      <DasType>CHARACTER VARYING(250)|0s</DasType>
       <Position>13</Position>
-      <StoredType>CHARACTER VARYING(250)|0s</StoredType>
     </column>
     <column id="211" parent="168" name="DEPLOYMGR">
       <Comment>배포담당자</Comment>
+      <DasType>CHARACTER VARYING(200)|0s</DasType>
       <Position>14</Position>
-      <StoredType>CHARACTER VARYING(200)|0s</StoredType>
     </column>
     <column id="212" parent="168" name="CREATEDAT">
       <Comment>생성일시</Comment>
+      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>15</Position>
-      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="213" parent="168" name="UPDATEDAT">
       <Comment>수정일시</Comment>
+      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>16</Position>
-      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <index id="214" parent="168" name="PRIMARY_KEY_F">
       <ColNames>ID</ColNames>
