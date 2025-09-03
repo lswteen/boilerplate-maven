@@ -17,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/excel")
 @RequiredArgsConstructor
+@CrossOrigin(origins = {"http://localhost:5173"}, maxAge = 3600)
 public class ExcelDownloadController {
     // 클래스 상단의 기존 필드에 추가
     private final ExcelDownloadService excelDownloadService;
