@@ -5,9 +5,7 @@ import com.farfarcoder.scm.utils.excel.dto.ProjectBuildExcelDto;
 import com.farfarcoder.scm.utils.excel.dto.ProjectProjMgmtExcelDto;
 import com.farfarcoder.scm.utils.excel.renderer.ExcelRenderer;
 
-import com.farfarcoder.scm.web.dashboard.controller.dto.ProjMgmtDto;
-import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectBuildResponse;
-import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectProjMgmtResponse;
+import com.farfarcoder.scm.web.dashboard.controller.dto.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
@@ -161,6 +159,39 @@ public class ExcelDownloadService {
             log.warn("Generated Excel file size ({} bytes) exceeds maximum size ({} bytes)",
                     excelBytes.length, maxSizeBytes);
             throw new RuntimeException("Excel file size too large");
+        }
+    }
+
+
+    /**
+     * 매핑되지 않은 Project Excel 파일 생성
+     * ProjMgmt와 매핑되지 않은 프로젝트 데이터
+     */
+    public ResponseEntity<Resource> generateUnmappedProjectsExcel(List<ProjectResponse> responses) {
+        log.info("Starting Unmapped Projects Excel generation. Data count: {}", responses.size());
+
+        try {
+            // 1. Response를 Excel DTO로 변환
+            List<UnmappedProjectExcelDto> excelData = responses.stream()
+                    .map(UnmappedProjectExcelDto::from)
+                    .collect(Collectors.toList());
+
+            // 2. Excel 파일 생성 (우아한형제들 방식)
+            byte[] excelBytes = excelRenderer.render(
+                    excelData,
+                    UnmappedProjectExcelDto.class,
+                    "Unmapped-Projects"
+            );
+
+            // 3. 파일명 생성 (날짜 포함)
+            String fileName = generateFileName("unmapped-projects");
+
+            // 4. ResponseEntity 생성
+            return createExcelResponse(excelBytes, fileName);
+
+        } catch (Exception e) {
+            log.error("Failed to generate Unmapped Projects Excel file", e);
+            throw new RuntimeException("Excel file generation failed", e);
         }
     }
 }

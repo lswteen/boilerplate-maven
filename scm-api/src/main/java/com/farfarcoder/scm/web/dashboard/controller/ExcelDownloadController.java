@@ -4,6 +4,7 @@ import com.farfarcoder.scm.domain.bamboo.service.NullProjMgmtService;
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjMgmtDto;
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectBuildResponse;
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectProjMgmtResponse;
+import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectResponse;
 import com.farfarcoder.scm.web.dashboard.service.ExcelDownloadService;
 import com.farfarcoder.scm.web.dashboard.service.ProjectBuildAppService;
 import com.farfarcoder.scm.web.dashboard.service.ProjectProjMgmtAppService;
@@ -122,6 +123,40 @@ public class ExcelDownloadController {
 
         } catch (Exception e) {
             log.error("Failed to download ProjectBuild Excel file", e);
+            return ResponseEntity.internalServerError().build();
+        }
+    }
+
+
+    @Operation(
+            summary = "매핑되지 않은 프로젝트 Excel 다운로드",
+            description = "ProjMgmt와 매핑되지 않은 모든 Project 데이터를 Excel 파일로 다운로드합니다. " +
+                    "총 104개 중 매핑된 82개를 제외한 나머지 프로젝트를 다운로드합니다. " +
+                    "파일명: unmapped-projects-{yyyyMMdd-HHmmss}.xlsx"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Excel 파일 다운로드 성공",
+                    content = @Content(mediaType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")),
+            @ApiResponse(responseCode = "500", description = "Excel 파일 생성 실패")
+    })
+    @GetMapping("/projectsNotMappedToProjMgmt")
+    public ResponseEntity<Resource> downloadUnmappedProjectsExcel() {
+        log.info("Request to download unmapped projects Excel file");
+
+        try {
+            // 1. 기존 API와 동일한 데이터 조회
+            List<ProjectResponse> responses = projectProjMgmtAppService.findProjectsNotMappedToProjMgmt();
+
+            log.info("Retrieved {} unmapped projects for Excel download", responses.size());
+
+            // 2. Excel 파일 생성 및 다운로드 응답
+            ResponseEntity<Resource> excelResponse = excelDownloadService.generateUnmappedProjectsExcel(responses);
+
+            log.info("Unmapped Projects Excel download completed successfully");
+            return excelResponse;
+
+        } catch (Exception e) {
+            log.error("Failed to download Unmapped Projects Excel file", e);
             return ResponseEntity.internalServerError().build();
         }
     }
