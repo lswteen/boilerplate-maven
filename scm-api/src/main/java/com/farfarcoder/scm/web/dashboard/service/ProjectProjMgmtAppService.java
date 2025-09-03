@@ -2,6 +2,7 @@ package com.farfarcoder.scm.web.dashboard.service;
 
 import com.farfarcoder.scm.domain.bamboo.model.Project;
 import com.farfarcoder.scm.domain.bamboo.model.ProjectProjMgmt;
+import com.farfarcoder.scm.domain.bamboo.model.SimpleProject;
 import com.farfarcoder.scm.domain.bamboo.service.ProjectProjMgmtService;
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectProjMgmtResponse;
 import com.farfarcoder.scm.web.dashboard.controller.dto.ProjectResponse;
@@ -37,7 +38,7 @@ public class ProjectProjMgmtAppService {
      */
     public List<ProjectResponse> findProjectsNotMappedToProjMgmt() {
         log.info("Request to find projects not mapped to projmgmt");
-        List<Project> projects = projectProjMgmtService.findProjectsNotMappedToProjMgmt();
+        List<SimpleProject> projects = projectProjMgmtService.findProjectsNotMappedToProjMgmt();
         return projectProjMgmtWebMapper.toProjectResponseList(projects);
     }
 
