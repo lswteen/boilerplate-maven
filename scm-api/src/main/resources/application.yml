@@ -43,6 +43,10 @@ spring:
 
   mvc:
     static-path-pattern: /static/**
+  couchbase:
+    env:
+      timeouts:
+
 
 springdoc:
   swagger-ui:
@@ -60,3 +64,20 @@ logging:
     org.hibernate.stat: INFO
     org.springframework.orm.jpa: INFO
     org.springframework.transaction: INFO
+
+
+management:
+  endpoints:
+    web:
+      base-path: /management
+      exposure:
+        incloude: ["health","refresh","env"]
+      cors:
+        allowed-origins: "*"
+        allowed-methods: GET
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
