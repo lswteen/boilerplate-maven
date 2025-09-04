@@ -182,7 +182,7 @@ const recentActivities = ref([
 const handleQuickAction = (action: string) => {
   switch (action) {
     case 'viewProjects':
-      // router.push('/projects')  // 다음 단계에서 활성화
+      router.push('/projects')  // 다음 단계에서 활성화
       alert('프로젝트 관리 화면은 다음 단계에서 구현됩니다')
       break
     case 'manageBUILDS':

@@ -3,7 +3,7 @@
     <div class="header-left">
       <!-- 로고/제목 -->
       <div class="logo-section">
-        <h1 class="app-title">🏗️ SCM Dashboard</h1>
+        <h1 class="app-title">SCM Dashboard</h1>
       </div>
     </div>
 
@@ -16,23 +16,24 @@
     </div>
 
     <div class="header-right">
-      <!-- 알림 버튼 -->
+      <!-- 알림 버튼
       <button class="header-btn notification-btn" title="알림">
         <span class="icon">🔔</span>
         <span class="badge" v-if="notificationCount > 0">{{ notificationCount }}</span>
       </button>
-
+      -->
       <!-- API 상태 표시 -->
       <div class="api-status" :class="{ 'connected': apiConnected, 'disconnected': !apiConnected }">
         <span class="status-icon">{{ apiConnected ? '🟢' : '🔴' }}</span>
         <span class="status-text">{{ apiConnected ? 'API 연결됨' : 'API 연결 안됨' }}</span>
       </div>
 
-      <!-- 사용자 정보 -->
+      <!-- 사용자 정보
       <div class="user-section">
         <div class="user-avatar">👤</div>
         <span class="username">Admin</span>
       </div>
+      -->
     </div>
   </header>
 </template>
@@ -61,12 +62,12 @@ const currentPageTitle = computed(() => {
 
 const currentPageIcon = computed(() => {
   const routeIcons: Record<string, string> = {
-    'Dashboard': '📊',
-    'Projects': '📁',
-    'Builds': '🔨',
-    'ApiTest': '🧪'
+    'Dashboard': '',
+    'Projects': '',
+    'Builds': '',
+    'ApiTest': ''
   }
-  return routeIcons[route.name as string] || '📊'
+  return routeIcons[route.name as string] || ''
 })
 
 // API 상태 확인
@@ -90,7 +91,7 @@ onMounted(async () => {
 <style scoped>
 .app-header {
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #ffffff; /* 변경: 그라데이션 → 단색 흰색 배경 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -101,6 +102,7 @@ onMounted(async () => {
   left: 0;
   right: 0;
   z-index: 1000;
+  border-bottom: 1px solid #e5e5e5; /* 추가: 하단 경계선 */
 }
 
 .header-left, .header-center, .header-right {
@@ -115,18 +117,18 @@ onMounted(async () => {
 }
 
 .app-title {
-  color: white;
+  color: #2c3e50; /* 변경: 흰색 → 어두운 색상으로 변경 */
   font-size: 20px;
   font-weight: 700;
   margin: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: none; /* 제거: 텍스트 그림자 제거 */
 }
 
 .current-page {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: #6c757d; /* 변경: 흰색 → 회색으로 변경 */
   font-size: 16px;
   font-weight: 500;
 }
@@ -136,9 +138,9 @@ onMounted(async () => {
 }
 
 .header-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(52, 152, 219, 0.1); /* 변경: 배경색 조정 */
+  border: 1px solid rgba(52, 152, 219, 0.2);
+  color: #3498db; /* 변경: 텍스트 색상 */
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -147,7 +149,7 @@ onMounted(async () => {
 }
 
 .header-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(52, 152, 219, 0.2);
 }
 
 .notification-btn .badge {
@@ -179,14 +181,14 @@ onMounted(async () => {
 }
 
 .api-status.connected {
-  background: rgba(76, 175, 80, 0.2);
-  color: #ffffff;
+  background: rgba(76, 175, 80, 0.1); /* 변경: 투명도 조정 */
+  color: #2e7d32; /* 변경: 텍스트 색상 */
   border: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 .api-status.disconnected {
-  background: rgba(244, 67, 54, 0.2);
-  color: #ffffff;
+  background: rgba(244, 67, 54, 0.1); /* 변경: 투명도 조정 */
+  color: #c62828; /* 변경: 텍스트 색상 */
   border: 1px solid rgba(244, 67, 54, 0.3);
 }
 
@@ -194,17 +196,17 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
-  background: rgba(255, 255, 255, 0.15);
+  color: #495057; /* 변경: 흰색 → 어두운 회색 */
+  background: rgba(108, 117, 125, 0.1); /* 변경: 배경 색상 조정 */
   padding: 6px 12px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(108, 117, 125, 0.2); /* 변경: 경계선 색상 */
 }
 
 .user-avatar {
   width: 28px;
   height: 28px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(108, 117, 125, 0.15); /* 변경: 배경 색상 */
   border-radius: 50%;
   display: flex;
   align-items: center;

@@ -1,33 +1,33 @@
 <template>
-  <aside class="sidebar" :class="{ 'collapsed': isCollapsed }">
+  <aside class="sidebar" :class="{ collapsed: isCollapsed }">
     <!-- 토글 버튼 -->
     <button class="toggle-btn" @click="handleToggle">
-      <span class="toggle-icon">{{ isCollapsed ? '▶️' : '◀️' }}</span>
+<!--      <span class="toggle-icon">{{ isCollapsed ? '▶' : '◀' }}</span>-->
     </button>
 
-    <!-- 네비게이션 메뉴 -->
+    <!-- 네비게이션 -->
     <nav class="sidebar-nav">
+      <!-- 메인 메뉴 -->
       <ul class="nav-list">
         <li v-for="item in navigationItems" :key="item.name" class="nav-item">
           <router-link
             :to="item.path"
             class="nav-link"
             :class="{ 'active': $route.name === item.name }"
-            :title="isCollapsed ? item.label : ''"
           >
             <span class="nav-icon">{{ item.icon }}</span>
-            <span class="nav-label" v-show="!isCollapsed">{{ item.label }}</span>
+            <span class="nav-label" v-if="!isCollapsed">{{ item.label }}</span>
             <span class="nav-badge" v-if="item.badge && !isCollapsed">{{ item.badge }}</span>
           </router-link>
         </li>
       </ul>
 
       <!-- 구분선 -->
-      <div class="nav-divider" v-show="!isCollapsed"></div>
+      <div class="nav-divider" v-if="!isCollapsed"></div>
 
-      <!-- 관리 메뉴 -->
-      <div class="nav-section" v-show="!isCollapsed">
-        <h3 class="section-title">관리</h3>
+      <!-- 관리 메뉴 섹션
+      <div class="nav-section" v-if="!isCollapsed">
+        <div class="nav-section-title">관리</div>
         <ul class="nav-list">
           <li v-for="item in managementItems" :key="item.name" class="nav-item">
             <router-link
@@ -37,31 +37,17 @@
             >
               <span class="nav-icon">{{ item.icon }}</span>
               <span class="nav-label">{{ item.label }}</span>
+              <span class="nav-badge" v-if="item.badge">{{ item.badge }}</span>
             </router-link>
           </li>
         </ul>
       </div>
+      -->
     </nav>
-
-    <!-- 하단 정보 -->
-    <div class="sidebar-footer" v-show="!isCollapsed">
-      <div class="footer-info">
-        <div class="info-item">
-          <span class="info-label">버전</span>
-          <span class="info-value">v1.0.0</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">환경</span>
-          <span class="info-value">DEV</span>
-        </div>
-      </div>
-    </div>
   </aside>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 interface NavigationItem {
   name: string
   path: string
@@ -78,28 +64,27 @@ const emit = defineEmits<{
   toggle: []
 }>()
 
-// 메인 네비게이션 메뉴 (현재 구현된 것만)
+// 메인 네비게이션 메뉴 (프로젝트 관리 활성화)
 const navigationItems: NavigationItem[] = [
   {
     name: 'Dashboard',
     path: '/',
     label: '대시보드',
-    icon: '📊'
+    icon: '-'
+  },
+  {
+    name: 'Projects',
+    path: '/projects',
+    label: '프로젝트 관리',
+    icon: '-'
   },
   {
     name: 'ApiTest',
     path: '/api-test',
     label: 'API 테스트',
-    icon: '🧪',
-    badge: 'NEW'
+    icon: '-'
   }
   // 다음 단계에서 추가될 메뉴들
-  // {
-  //   name: 'Projects',
-  //   path: '/projects',
-  //   label: '프로젝트 관리',
-  //   icon: '📁'
-  // },
   // {
   //   name: 'Builds',
   //   path: '/builds',
@@ -108,7 +93,7 @@ const navigationItems: NavigationItem[] = [
   // }
 ]
 
-// 관리 메뉴 (임시로 비활성화)
+// 관리 메뉴 (다음 단계에서 활성화)
 const managementItems: NavigationItem[] = [
   // 다음 단계에서 활성화
   // {
@@ -152,13 +137,13 @@ const handleToggle = () => {
 
 .toggle-btn {
   position: absolute;
-  top: 12px;
+  top: 50%; /* 변경: 12px → 50% (사이드바 세로 가운데) */
   right: -15px;
   background: #3498db;
   border: none;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 1px;
   color: white;
   cursor: pointer;
   display: flex;
@@ -167,11 +152,12 @@ const handleToggle = () => {
   z-index: 1001;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
+  transform: translateY(-50%); /* 추가: 정확한 가운데 정렬 */
 }
 
 .toggle-btn:hover {
   background: #2980b9;
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1); /* 변경: 가운데 정렬 유지하면서 크기 변경 */
 }
 
 .toggle-icon {
@@ -203,6 +189,7 @@ const handleToggle = () => {
   transition: all 0.2s ease;
   position: relative;
   gap: 12px;
+  justify-content: flex-start; /* 아이콘 제거 후 정렬 조정 */
 }
 
 .nav-link:hover {
@@ -212,9 +199,8 @@ const handleToggle = () => {
 }
 
 .nav-link.active {
-  background: #3498db; /* 그라디언트 제거 */
+  background: #3498db;
   color: white;
-  border-left: 3px solid #e74c3c;
 }
 
 .nav-link.active::before {
@@ -225,7 +211,6 @@ const handleToggle = () => {
   transform: translateY(-50%);
   width: 3px;
   height: 20px;
-  background: #e74c3c;
 }
 
 .nav-icon {
@@ -261,88 +246,47 @@ const handleToggle = () => {
   margin-top: 20px;
 }
 
-.section-title {
-  color: #7f8c8d;
+.nav-section-title {
+  padding: 8px 20px;
   font-size: 12px;
   font-weight: 600;
+  color: #95a5a6;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 0 20px 10px;
-  margin: 0;
-}
-
-.sidebar-footer {
-  padding: 20px;
-  border-top: 1px solid var(--card-border);
-  background: var(--darker-bg);
-  margin-top: auto;
-}
-
-.footer-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.info-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-}
-
-.info-label {
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-.info-value {
-  color: var(--text-secondary);
-  font-weight: 600;
-  padding: 2px 8px;
-  background: var(--card-bg);
-  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .sidebar {
-    width: 250px;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    width: 250px;
   }
 
   .sidebar.collapsed {
     transform: translateX(-100%);
-    width: 250px;
   }
 
-  .sidebar.open {
+  .sidebar.show {
     transform: translateX(0);
-  }
-
-  .toggle-btn {
-    display: none;
   }
 }
 
-/* 스크롤바 스타일링 */
+/* 스크롤바 스타일 */
 .sidebar-nav::-webkit-scrollbar {
   width: 4px;
 }
 
 .sidebar-nav::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.05); /* 변경: 검은색 투명 배경 */
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.2); /* 변경: 검은색 투명 썸 */
+  border-radius: 4px;
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3); /* 변경: 검은색 투명 호버 */
 }
 </style>
