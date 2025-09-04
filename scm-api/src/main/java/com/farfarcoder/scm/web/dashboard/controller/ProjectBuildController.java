@@ -21,6 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/project-builds")
 @RequiredArgsConstructor
+@CrossOrigin(origins = {"http://localhost:5173"}, maxAge = 3600)
 public class ProjectBuildController {
     private final ProjectBuildAppService projectBuildAppService;
 
