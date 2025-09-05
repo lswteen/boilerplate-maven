@@ -135,6 +135,17 @@ export class ProjectService {
     })
     return response.data
   }
+
+  /**
+   * 매핑되지 않은 프로젝트 Excel 다운로드
+   */
+  static async downloadUnmappedProjectsExcel(): Promise<Blob> {
+    const response = await apiClient.get('/api/v1/excel/projectsNotMappedToProjMgmt', {
+      responseType: 'blob'
+    })
+    return response.data
+  }
+
 }
 
 // 기본 내보내기
