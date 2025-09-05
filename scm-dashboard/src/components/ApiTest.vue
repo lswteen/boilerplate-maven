@@ -15,7 +15,7 @@
 
     <!-- Project-ProjMgmt 테스트 -->
     <div class="test-section">
-      <h3>🏗️ Project-ProjMgmt API 테스트</h3>
+      <h3>Project-ProjMgmt API 테스트</h3>
 
       <div class="button-group">
         <button @click="testProjectProjMgmt" :disabled="loading">
