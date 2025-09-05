@@ -22,8 +22,7 @@ const router = createRouter({
           name: 'Projects',
           component: () => import('@/views/ProjectsView.vue'),
           meta: {
-            title: '프로젝트 관리',
-            icon: '📁'
+            title: '프로젝트 관리'
           }
         },
         {
@@ -31,8 +30,24 @@ const router = createRouter({
           name: 'ApiTest',
           component: () => import('@/components/ApiTest.vue'),
           meta: {
-            title: 'API 테스트',
-            icon: '🧪'
+            title: 'API 테스트'
+          }
+        },
+        {
+          path: '/null-projmgmt',
+          name: 'NullProjMgmt',
+          component: () => import('@/views/NullProjMgmtView.vue'),
+          meta: {
+            title: 'NULL 프로젝트 관리'
+          }
+        },
+        // 기존 ApiTest 라우트 아래에 추가
+        {
+          path: '/project-builds',
+          name: 'ProjectBuilds',
+          component: () => import('@/views/ProjectBuildsView.vue'),
+          meta: {
+            title: '빌드 관리'
           }
         }
         // 나머지 라우트들은 다음 단계에서 추가

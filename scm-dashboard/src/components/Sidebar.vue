@@ -1,8 +1,8 @@
 <template>
   <aside class="sidebar" :class="{ collapsed: isCollapsed }">
-    <!-- 토글 버튼 -->
+    <!-- 좌측 메뉴 펼치기/접기 버튼 -->
     <button class="toggle-btn" @click="handleToggle">
-<!--      <span class="toggle-icon">{{ isCollapsed ? '▶' : '◀' }}</span>-->
+    <!-- <span class="toggle-icon">{{ isCollapsed ? '▶' : '◀' }}</span> -->
     </button>
 
     <!-- 네비게이션 -->
@@ -21,28 +21,8 @@
           </router-link>
         </li>
       </ul>
-
       <!-- 구분선 -->
       <div class="nav-divider" v-if="!isCollapsed"></div>
-
-      <!-- 관리 메뉴 섹션
-      <div class="nav-section" v-if="!isCollapsed">
-        <div class="nav-section-title">관리</div>
-        <ul class="nav-list">
-          <li v-for="item in managementItems" :key="item.name" class="nav-item">
-            <router-link
-              :to="item.path"
-              class="nav-link"
-              :class="{ 'active': $route.name === item.name }"
-            >
-              <span class="nav-icon">{{ item.icon }}</span>
-              <span class="nav-label">{{ item.label }}</span>
-              <span class="nav-badge" v-if="item.badge">{{ item.badge }}</span>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-      -->
     </nav>
   </aside>
 </template>
@@ -79,18 +59,23 @@ const navigationItems: NavigationItem[] = [
     icon: '-'
   },
   {
+    name: 'ProjectBuilds',
+    path: '/project-builds',
+    label: '빌드 관리',
+    icon: '-'
+  },
+  {
+    name: 'NullProjMgmt',
+    path: '/null-projmgmt',
+    label: 'NULL 관리',
+    icon: '-'
+  },
+  {
     name: 'ApiTest',
     path: '/api-test',
     label: 'API 테스트',
     icon: '-'
   }
-  // 다음 단계에서 추가될 메뉴들
-  // {
-  //   name: 'Builds',
-  //   path: '/builds',
-  //   label: '빌드 관리',
-  //   icon: '🔨'
-  // }
 ]
 
 // 관리 메뉴 (다음 단계에서 활성화)

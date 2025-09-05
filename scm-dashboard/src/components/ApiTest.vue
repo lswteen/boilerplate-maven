@@ -1,10 +1,10 @@
 <template>
   <div class="api-test">
-    <h2>🔧 API 연동 테스트</h2>
+    <h2>API 연동 테스트</h2>
 
     <!-- API 상태 표시 -->
     <div class="status-section">
-      <h3>📡 API 서버 상태</h3>
+      <h3>API 서버 상태</h3>
       <button @click="checkApiStatus" :disabled="loading">
         {{ loading ? '확인 중...' : 'API 상태 확인' }}
       </button>
@@ -54,14 +54,14 @@
         ✅ 성공: {{ projectProjMgmtData.length }}개 프로젝트 조회됨
       </p>
       <div v-if="projectProjMgmtData.length > 0" class="data-preview">
-        <h4>📋 첫 번째 프로젝트 정보:</h4>
+        <h4>첫 번째 프로젝트 정보:</h4>
         <pre>{{ JSON.stringify(projectProjMgmtData[0], null, 2) }}</pre>
       </div>
     </div>
 
     <!-- Project-Build 테스트 -->
     <div class="test-section">
-      <h3>🔨 Project-Build API 테스트</h3>
+      <h3>Project-Build API 테스트</h3>
 
       <div class="button-group">
         <button @click="testProjectBuild" :disabled="loading">
@@ -101,14 +101,14 @@
         ✅ 성공: {{ projectBuildData.length }}개 프로젝트 조회됨
       </p>
       <div v-if="projectBuildData.length > 0" class="data-preview">
-        <h4>📋 첫 번째 프로젝트 정보:</h4>
+        <h4>첫 번째 프로젝트 정보:</h4>
         <pre>{{ JSON.stringify(projectBuildData[0], null, 2) }}</pre>
       </div>
     </div>
 
     <!-- NULL ProjMgmt 테스트 -->
     <div class="test-section">
-      <h3>⚠️ NULL ProjMgmt API 테스트</h3>
+      <h3>NULL ProjMgmt API 테스트</h3>
 
       <div class="button-group">
         <button @click="testNullProjMgmtDto" :disabled="loading">
@@ -123,14 +123,14 @@
         ✅ 성공: {{ nullProjMgmtData.length }}개 NULL 프로젝트관리 조회됨
       </p>
       <div v-if="nullProjMgmtData.length > 0" class="data-preview">
-        <h4>📋 첫 번째 NULL ProjMgmt 정보:</h4>
+        <h4>첫 번째 NULL ProjMgmt 정보:</h4>
         <pre>{{ JSON.stringify(nullProjMgmtData[0], null, 2) }}</pre>
       </div>
     </div>
 
     <!-- Excel 다운로드 테스트 -->
     <div class="test-section">
-      <h3>📊 Excel 다운로드 API 테스트</h3>
+      <h3>Excel 다운로드 API 테스트</h3>
 
       <div class="button-group">
         <button @click="testDownloadProjectProjMgmtExcel" :disabled="loading">
