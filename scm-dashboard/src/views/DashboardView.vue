@@ -2,7 +2,7 @@
   <div class="dashboard">
     <!-- 페이지 헤더 -->
     <div class="page-header">
-      <h1 class="page-title">📊 대시보드</h1>
+      <h1 class="page-title">대시보드</h1>
       <p class="page-description">
         SCM 프로젝트와 빌드 현황을 한눈에 확인하세요
       </p>
@@ -25,7 +25,7 @@
 
     <!-- 빠른 액션 -->
     <div class="quick-actions">
-      <h2 class="section-title">🚀 빠른 액션</h2>
+      <h2 class="section-title">빠른 액션</h2>
       <div class="actions-grid">
         <button
           v-for="action in quickActions"
@@ -44,7 +44,7 @@
 
     <!-- 최근 활동 -->
     <div class="recent-activity">
-      <h2 class="section-title">📋 최근 활동</h2>
+      <h2 class="section-title">최근 활동</h2>
       <div class="activity-list">
         <div
           v-for="activity in recentActivities"
@@ -79,33 +79,33 @@ const stats = ref([
   {
     title: '총 프로젝트',
     value: '24',
-    icon: '📁',
+    icon: '',
     trend: 'positive',
-    trendIcon: '📈',
+    trendIcon: '',
     trendText: '+3 이번 주'
   },
   {
     title: '활성 빌드',
     value: '15',
-    icon: '🔨',
+    icon: '',
     trend: 'positive',
-    trendIcon: '✅',
+    trendIcon: '',
     trendText: '정상 동작'
   },
   {
     title: '완료된 배포',
     value: '8',
-    icon: '🚀',
+    icon: '',
     trend: 'neutral',
-    trendIcon: '⏱️',
+    trendIcon: '',
     trendText: '오늘'
   },
   {
     title: '대기중 작업',
     value: '3',
-    icon: '⏳',
+    icon: '',
     trend: 'negative',
-    trendIcon: '⚠️',
+    trendIcon: '',
     trendText: '주의 필요'
   }
 ])
@@ -115,25 +115,25 @@ const quickActions = ref([
   {
     title: '프로젝트 조회',
     description: '전체 프로젝트 목록을 확인합니다',
-    icon: '🔍',
+    icon: '',
     action: 'viewProjects'
   },
   {
     title: '빌드 관리',
     description: '빌드 상태를 확인하고 관리합니다',
-    icon: '⚡',
+    icon: '',
     action: 'manageBUILDS'
   },
   {
     title: 'API 테스트',
     description: 'API 연결 상태를 테스트합니다',
-    icon: '🧪',
+    icon: '',
     action: 'testApi'
   },
   {
     title: '데이터 내보내기',
     description: 'Excel 파일로 데이터를 다운로드합니다',
-    icon: '📊',
+    icon: '',
     action: 'exportData'
   }
 ])
@@ -153,7 +153,7 @@ const recentActivities = ref([
     id: 2,
     title: '새 프로젝트 등록',
     description: 'SCM-DASHBOARD 프로젝트가 시스템에 등록되었습니다',
-    icon: '📝',
+    icon: '',
     time: '15분 전',
     status: 'info',
     statusText: '등록'
@@ -162,7 +162,7 @@ const recentActivities = ref([
     id: 3,
     title: '빌드 실패 알림',
     description: 'TEST-PROJECT 빌드에서 오류가 발생했습니다',
-    icon: '❌',
+    icon: '',
     time: '1시간 전',
     status: 'error',
     statusText: '실패'
@@ -171,7 +171,7 @@ const recentActivities = ref([
     id: 4,
     title: 'API 연결 재시도',
     description: 'API 서버 연결이 복구되어 정상 작동 중입니다',
-    icon: '🔄',
+    icon: '',
     time: '2시간 전',
     status: 'warning',
     statusText: '복구'
@@ -182,7 +182,7 @@ const recentActivities = ref([
 const handleQuickAction = (action: string) => {
   switch (action) {
     case 'viewProjects':
-      // router.push('/projects')  // 다음 단계에서 활성화
+      router.push('/projects')  // 다음 단계에서 활성화
       alert('프로젝트 관리 화면은 다음 단계에서 구현됩니다')
       break
     case 'manageBUILDS':

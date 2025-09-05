@@ -28,7 +28,7 @@ apiClient.interceptors.request.use(
     return config
   },
   (error) => {
-    console.error('❌ Request Error:', error)
+    console.error('Request Error:', error)
     return Promise.reject(error)
   }
 )
@@ -42,7 +42,7 @@ apiClient.interceptors.response.use(
   },
   (error) => {
     // 에러 처리
-    console.error('❌ Response Error:', error)
+    console.error('Response Error:', error)
 
     if (error.response) {
       // 서버가 응답했지만 에러 상태코드

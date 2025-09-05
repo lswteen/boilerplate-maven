@@ -18,6 +18,15 @@ const router = createRouter({
           }
         },
         {
+          path: '/projects',
+          name: 'Projects',
+          component: () => import('@/views/ProjectsView.vue'),
+          meta: {
+            title: '프로젝트 관리',
+            icon: '📁'
+          }
+        },
+        {
           path: '/api-test',
           name: 'ApiTest',
           component: () => import('@/components/ApiTest.vue'),

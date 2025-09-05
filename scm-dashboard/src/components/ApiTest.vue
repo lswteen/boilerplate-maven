@@ -1,21 +1,21 @@
 <template>
   <div class="api-test">
-    <h2>🔧 API 연동 테스트</h2>
+    <h2>API 연동 테스트</h2>
 
     <!-- API 상태 표시 -->
     <div class="status-section">
-      <h3>📡 API 서버 상태</h3>
+      <h3>API 서버 상태</h3>
       <button @click="checkApiStatus" :disabled="loading">
         {{ loading ? '확인 중...' : 'API 상태 확인' }}
       </button>
       <p class="status" :class="apiStatus ? 'success' : 'error'">
-        상태: {{ apiStatus ? '✅ 연결됨' : '❌ 연결 실패' }}
+        상태: {{ apiStatus ? '✅ 연결됨' : '연결 실패' }}
       </p>
     </div>
 
     <!-- Project-ProjMgmt 테스트 -->
     <div class="test-section">
-      <h3>🏗️ Project-ProjMgmt API 테스트</h3>
+      <h3>Project-ProjMgmt API 테스트</h3>
       <button @click="testProjectProjMgmt" :disabled="loading">
         매핑된 프로젝트 조회
       </button>
@@ -23,14 +23,14 @@
         ✅ 성공: {{ projectProjMgmtData.length }}개 프로젝트 조회됨
       </p>
       <div v-if="projectProjMgmtData.length > 0" class="data-preview">
-        <h4>📋 첫 번째 프로젝트 정보:</h4>
+        <h4>첫 번째 프로젝트 정보:</h4>
         <pre>{{ JSON.stringify(projectProjMgmtData[0], null, 2) }}</pre>
       </div>
     </div>
 
     <!-- Project-Build 테스트 -->
     <div class="test-section">
-      <h3>🔨 Project-Build API 테스트</h3>
+      <h3>Project-Build API 테스트</h3>
       <button @click="testProjectBuild" :disabled="loading">
         프로젝트-빌드 조회
       </button>
@@ -38,14 +38,14 @@
         ✅ 성공: {{ projectBuildData.length }}개 프로젝트 조회됨
       </p>
       <div v-if="projectBuildData.length > 0" class="data-preview">
-        <h4>📋 첫 번째 프로젝트 정보:</h4>
+        <h4>첫 번째 프로젝트 정보:</h4>
         <pre>{{ JSON.stringify(projectBuildData[0], null, 2) }}</pre>
       </div>
     </div>
 
     <!-- NULL ProjMgmt 테스트 -->
     <div class="test-section">
-      <h3>⚠️ NULL ProjMgmt API 테스트</h3>
+      <h3>NULL ProjMgmt API 테스트</h3>
       <button @click="testNullProjMgmt" :disabled="loading">
         NULL 프로젝트관리 조회
       </button>
@@ -56,7 +56,7 @@
 
     <!-- 에러 표시 -->
     <div v-if="error" class="error-section">
-      <h3>❌ 에러 발생</h3>
+      <h3>에러 발생</h3>
       <p class="error">{{ error }}</p>
     </div>
   </div>
@@ -101,7 +101,7 @@ const testProjectProjMgmt = async () => {
     projectProjMgmtData.value = await ProjectService.getAllProjectsWithProjMgmt()
     console.log('✅ Project-ProjMgmt 데이터:', projectProjMgmtData.value)
   } catch (err: any) {
-    console.error('❌ Project-ProjMgmt 조회 실패:', err)
+    console.error('Project-ProjMgmt 조회 실패:', err)
     error.value = `Project-ProjMgmt 조회 실패: ${err.message}`
   } finally {
     loading.value = false
@@ -117,7 +117,7 @@ const testProjectBuild = async () => {
     projectBuildData.value = await ProjectService.getAllProjectsWithBuilds()
     console.log('✅ Project-Build 데이터:', projectBuildData.value)
   } catch (err: any) {
-    console.error('❌ Project-Build 조회 실패:', err)
+    console.error('Project-Build 조회 실패:', err)
     error.value = `Project-Build 조회 실패: ${err.message}`
   } finally {
     loading.value = false
@@ -133,7 +133,7 @@ const testNullProjMgmt = async () => {
     nullProjMgmtData.value = await ProjectService.getNullProjMgmtDtos()
     console.log('✅ NULL ProjMgmt 데이터:', nullProjMgmtData.value)
   } catch (err: any) {
-    console.error('❌ NULL ProjMgmt 조회 실패:', err)
+    console.error('NULL ProjMgmt 조회 실패:', err)
     error.value = `NULL ProjMgmt 조회 실패: ${err.message}`
   } finally {
     loading.value = false
