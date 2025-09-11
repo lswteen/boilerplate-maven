@@ -9,10 +9,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/chat")
-@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class ChatController {
     private final ChatClient chatClient;
+
     /**
      * 연결 상태 확인
      */
@@ -28,7 +28,7 @@ public class ChatController {
             return Map.of(
                     "status", "healthy",
                     "message", "Spring AI 연결 정상",
-                    "test_response", response.getResult().getOutput().getText(),
+                    "test_response", response.getResult().getOutput().getText(), // getText() -> getContent()
                     "model", response.getMetadata().getModel(),
                     "timestamp", System.currentTimeMillis()
             );
