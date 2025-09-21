@@ -17,6 +17,7 @@
     <module>channel-gateway</module>
     <module>scm-api</module>
     <module>ai-chatbot</module>
+    <module>mcp-server</module>
   </modules>
   <!-- 공통 프로퍼티 관리 -->
   <properties>
@@ -42,16 +43,14 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
       <!-- 공식 가이드: Spring AI BOM 의존성 관리 -->
-        <dependency>
-          <groupId>org.springframework.ai</groupId>
-          <artifactId>spring-ai-bom</artifactId>
-          <version>${spring.ai.version}</version>
-          <type>pom</type>
-          <scope>import</scope>
-        </dependency>
-
+      <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-bom</artifactId>
+        <version>${spring.ai.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <!-- springframework cloud -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -75,7 +74,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <pluginManagement>
       <plugins>

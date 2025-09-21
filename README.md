@@ -151,6 +151,14 @@ mvn archetype:generate \
     -DinteractiveMode=false           
 ```
 
+```html
+mvn archetype:generate \
+    -DgroupId=com.farfarcoder \
+    -DartifactId=mcp-server \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false
+```
+
 # maven 명령어
 ## maven 기본 클린 및 install
 >mvn clean install
