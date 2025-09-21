@@ -1,0 +1,13 @@
+# mcp-server/src/test/resources/application-test.yml
+server:
+  port: 0  # 랜덤 포트 사용
+
+spring:
+  application:
+    name: mcp-server-test
+  ai:
+    mcp:
+      server:
+        name: "Test MCP Server"
+        version: "1.0.0"
+        type: SYNC
