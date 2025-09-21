@@ -1,0 +1,22 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: mcp-server
+
+  # Spring AI MCP 서버 설정
+  ai:
+    mcp:
+      server:
+        name: "CICD Management MCP Server"
+        version: "1.0.0"
+        type: SYNC
+        instructions: "CICD 관리를 위한 MCP 서버 - Bitbucket, Bamboo, Build 정보 제공"
+        sse-message-endpoint: /mcp/messages
+        capabilities:
+          tool: true
+          resource: true
+          prompt: false
+          completion: false
+

@@ -5,22 +5,31 @@ spring:
   application:
     name: ai-chatbot
 
+
+
   # Spring AI OpenAI 설정 (공식 문서 방식)
   ai:
-    openai:
-      api-key: ${OPENAI_API_KEY:demo} # 환경변수로 설정 (기본값: demo - 테스트용)
-      chat:
-        options:
-          model: gpt-3.5-turbo
-          temperature: 0.7
-          max-tokens: 1000
-    # Ollama 로컬 설정 (OpenAI 대안)
     ollama:
-      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      base-url: http://localhost:11434
       chat:
-        enabled: false # 처음엔 비활성화, 필요시 활성화
         options:
-          model: llama2
+          model: llama3.2:1b
+          temperature: 0.3              # 더 일관된 응답 (0.7 → 0.3)
+          top-p: 0.9                    # 응답 품질 향상
+          num-predict: 1000             # 적당한 응답 길이 제한
+          repeat-penalty: 1.1           # 반복 방지
+          stop: [ "Human:", "Assistant:" ] # 불필요한 반복 중단
+          num-ctx: 2048                 # 컨텍스트 창 크기 (메모리 효율성)
+          # M2 Mac 최적화 설정
+          num-thread: 8                 # M2의 성능 코어 활용
+          num-gpu: 1                    # M2 GPU 활용 (가능한 경우)
+#    anthropic:
+#      api-key : ${ANTHROPIC_API_KEY:demo}
+#      chat:
+#        options:
+#          model: claude-3-5-sonnet-20241022 # 최신 claude 3.5 Sonnet
+#          max-tokens: 4000
+#          temperature: 0.7
 
 # 로깅 설정
 #logging:

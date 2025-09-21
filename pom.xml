@@ -17,6 +17,7 @@
     <module>channel-gateway</module>
     <module>scm-api</module>
     <module>ai-chatbot</module>
+    <module>mcp-server</module>
   </modules>
   <!-- 공통 프로퍼티 관리 -->
   <properties>
@@ -28,7 +29,8 @@
     <junit.version>3.8.1</junit.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <projectlombok.version>0.2.0</projectlombok.version>
-    <spring.ai.version>1.0.0-M6</spring.ai.version>  <!-- Maven Central 버전 사용 -->
+    <!-- Spring AI 1.0.1로 업그레이드 -->
+    <spring.ai.version>1.0.1</spring.ai.version>
   </properties>
   <!-- 공통 설정 관리 -->
   <dependencyManagement>
@@ -41,8 +43,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-      <!-- Spring AI BOM 추가 (공식 문서 권장) -->
+      <!-- 공식 가이드: Spring AI BOM 의존성 관리 -->
       <dependency>
         <groupId>org.springframework.ai</groupId>
         <artifactId>spring-ai-bom</artifactId>
@@ -50,7 +51,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
       <!-- springframework cloud -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -74,7 +74,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <pluginManagement>
       <plugins>
