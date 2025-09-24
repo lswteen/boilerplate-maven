@@ -15,6 +15,7 @@ import java.time.Duration;
 @Configuration
 @EnableWebFlux
 public class WebConfig implements WebFluxConfigurer {
+
     @Bean
     public NettyServerCustomizer nettyServerCustomizer() {
         return httpServer -> httpServer
@@ -26,5 +27,6 @@ public class WebConfig implements WebFluxConfigurer {
         configurer.defaultCodecs().jackson2JsonEncoder(new Jackson2JsonEncoder(ObjectMapperUtils.defaultMapper()));
         configurer.defaultCodecs().jackson2JsonDecoder(new Jackson2JsonDecoder(ObjectMapperUtils.defaultMapper()));
     }
+
 }
 
