@@ -1,3 +1,33 @@
+POST http://localhost:8091/api/tools/searchProject
+Content-Type: application/json
+Content-Length: 26
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "projectKey": "LCTC"
+}
+
+<> 2025-09-24T173023.500.json
+
+###
+
+POST http://localhost:8091/api/tools/searchProject
+Content-Type: application/json
+Content-Length: 26
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "projectKey": "LCTC"
+}
+
+<> 2025-09-24T172319.500.json
+
+###
+
 GET http://localhost:9999/api/tour/hotels
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2

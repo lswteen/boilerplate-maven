@@ -1,0 +1,8 @@
+
+### 3. 프로젝트 검색 - LCTC
+POST http://localhost:8091/api/tools/searchProject
+Content-Type: application/json
+
+{
+  "projectKey": "LCTC"
+}

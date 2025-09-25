@@ -14,14 +14,18 @@ public class CicdToolService {
     private final CicdDataService cicdDataService;
 
     @Tool(description = "CICD 프로젝트 검색 - 프로젝트 키로 상세 정보 조회")
-    public String searchProject(@ToolParam(description="프로젝트 키 (예: LCTC)") String projectKey) {
-        log.info("🔍 MCP Tool called: searchProject with key={}", projectKey);
+    public String searchProject(
+            @ToolParam(description = "프로젝트 키 (예: LCTC)") String projectKey) {
+
+        log.info("MCP Tool 호출: searchProject - {}", projectKey);
         return cicdDataService.searchProject(projectKey);
     }
 
-    @Tool(description = "프로젝트 빌드 상태 조회 - 최근 빌드 정보 확인")
-    public String getBuildStatus(@ToolParam(description="프로젝트 키 (예: LCTC)") String projectKey) {
-        log.info("🔧 MCP Tool called: getBuildStatus with key={}", projectKey);
-        return cicdDataService.getBuildStatus(projectKey);
+
+    @Tool(description = "SCM API 서버 상태 확인 - 연결 상태 점검")
+    public String checkApiStatus() {
+
+        log.info("MCP Tool 호출: checkApiStatus");
+        return cicdDataService.getApiStatus();
     }
 }

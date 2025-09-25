@@ -20,3 +20,10 @@ spring:
           prompt: false
           completion: false
 
+# SCM API 연동 설정
+scm:
+  api:
+    base-url: http://localhost:58080
+    timeout:
+      connect: 5000  # 5초
+      read: 10000    # 10초
