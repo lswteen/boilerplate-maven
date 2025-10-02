@@ -60,3 +60,10 @@ logs/
 *.swp
 *.swo
 *~
+
+# Environment variables
+.env
+.env.local
+.env.dev
+.env.stg
+.env.prod
