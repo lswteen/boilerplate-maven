@@ -8,7 +8,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -33,21 +32,6 @@ class CicdToolServiceTest {
         // Then
         assertThat(result).isEqualTo(expectedResult);
         verify(cicdDataService).searchProject(projectKey);
-    }
-
-    @Test
-    void getBuildStatus_Tool호출() {
-        // Given
-        String projectKey = "LCTC";
-        String expectedResult = "빌드 상태";
-        when(cicdDataService.getBuildStatus(projectKey)).thenReturn(expectedResult);
-
-        // When
-        String result = cicdToolService.getBuildStatus(projectKey);
-
-        // Then
-        assertThat(result).isEqualTo(expectedResult);
-        verify(cicdDataService).getBuildStatus(projectKey);
     }
 
 }

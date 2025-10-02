@@ -17,7 +17,7 @@ spring:
         wiretap: false # debugging = true
       httpclient:
         connect-timeout: 3_000
-        response-timeout: 5s
+        response-timeout: 5
         pool:
           type: elastic
           max-idle-time: 60s
@@ -90,25 +90,52 @@ management:
           - device_info
           - clientIP
 
-# 커스텀 HTTP 포트 설정 추가
-custom:
-  http:
-    port: 8888
-    enabled: true
-
 # server graceful 추가
 server:
   shutdown: graceful
-  port: 8443
+  port: 8443  # HTTPS 메인포트
+
+
+  # SSL/TLS 설정
   ssl:
     enabled: true
-    key-store: classpath:certs/gateway.p12
-    key-store-password: changeit
+    key-store: classpath:keystore/keystore.p12
+    key-store-password: ${SSL_KEYSTORE_PASSWORD:changeit}
     key-store-type: PKCS12
-    key-alias: 1
+    key-alias: channel-gateway
+
+    # 보안 프로토콜 설정
     protocol: TLS
     enabled-protocols: TLSv1.2,TLSv1.3
-#    ciphers:
-#      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-#      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
+    # Cipher Suite 설정 (강력한 암호화만 허용)
+    ciphers:
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+
+    # 클라이언트 인증 (필요시 활성화)
+    # client-auth: need  # none, want, need 중 선택
+
+  # HTTP/2 활성화 - 프로토콜 레벨 최적화
+  # 효과: 멀티플렉싱, 헤더 압축(HPACK), 서버 푸시
+  # HTTPS가 필수이므로 SSL 설정과 함께 사용
+  http2:
+    enabled: true
+
+  # Response Body 압축 설정 - 데이터 전송량 최적화
+  # 효과: JSON, HTML 등 텍스트 기반 응답을 70-90% 압축
+  # HTTP/2의 헤더 압축과는 별개로 본문(body)을 압축
+  compression:
+    enabled: true
+    mime-types:
+      - text/html
+      - text/xml
+      - text/plain
+      - text/css
+      - text/javascript
+      - application/javascript
+      - application/json
+      - application/xml
+    min-response-size: 1024
