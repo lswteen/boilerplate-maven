@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: oauth-server
+              predicates:
+                - Path=/api/oauth2/**
+              uri: ${inbound.domain.oauth.${spring.profiles.active:local}}
+              filters:
+                - RewritePath=/api/oauth2/(?<segment>.*), /api/oauth2/$\{segment}
+              metadata:
+                response-timeout: 30000
+                connect-timeout: 5000

@@ -31,8 +31,8 @@ public class WebConfig implements WebFluxConfigurer {
     public NettyServerCustomizer nettyServerCustomizer() {
         return httpServer -> httpServer
                 .idleTimeout(Duration.ofSeconds(60))
-                // HTTP/1.1 및 HTTP/2 프로토콜 지원
-                .protocol(HttpProtocol.HTTP11, HttpProtocol.H2)
+                // HTTP/2는 HTTPS에만 적용 (8443 포트)
+                //.protocol(HttpProtocol.H2, HttpProtocol.HTTP11)
 
                 // TCP 옵션 설정
                 .option(ChannelOption.SO_KEEPALIVE, true)

@@ -1,0 +1,10 @@
+inbound:
+  domain:
+    oauth:
+      local: http://doauth.abcd.co.kr
+      dev: http://doauth.abcd.co.kr
+      prd: http://doauth.abcd.co.kr
+    travel:
+      local: http://trip.abcd.co.kr
+      dev: http://trip.abcd.co.kr
+      prd: http://trip.abcd.co.kr

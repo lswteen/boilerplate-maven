@@ -3,7 +3,14 @@ spring:
     name: channel-gateway
 
   profiles:
-    active: local
+    active: ${SPRING_PROFILES_ACTIVE}
+
+  config:
+    import:
+      - classpath:/routes/outbound-domain.yml
+      - classpath:/routes/inbound-domain.yml
+      - classpath:/routes/gateway-routes.yml
+      - classpath:/routes/white-list.yml
 
   cloud:
     config:
@@ -13,55 +20,47 @@ spring:
       password: user
 
     gateway:
-      httpserver:
-        wiretap: false # debugging = true
-      httpclient:
-        connect-timeout: 3_000
-        response-timeout: 5
-        pool:
-          type: elastic
-          max-idle-time: 60s
-          acquire-timeout: 45_000
-        compression: true
-        ssl:
-          handshake-timeout: 10s
-          close-notify-flush-timeout: 3s
-          close-notify-read-timeout: 10s
-        wiretap: false # debugging = true
+      server:
+        webflux:
+          httpserver:
+            wiretap: false # debugging = true
+          httpclient:
+            connect-timeout: 3000  # 3초 (밀리초)
+            response-timeout: 5s   # 5초 (Duration)
+            pool:
+              type: elastic
+              max-idle-time: 60s
+              acquire-timeout: 45000  # 45초 (밀리초)
+            compression: true
+            ssl:
+              handshake-timeout: 10s
+              close-notify-flush-timeout: 3s
+              close-notify-read-timeout: 10s
+            wiretap: false # debugging = true
 
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOriginPatterns: '*'
-            allowCredentials: true
-            allowedHeaders: '*'
-            allowedMethods:
-              - GET
-              - POST
-              - HEAD
-              - OPTIONS
+          global-cors:
+            cors-configurations:  # kebab-case로 변경
+              '[/**]':
+                allowed-origin-patterns: '*'  # kebab-case로 변경
+                allow-credentials: true     # kebab-case로 변경
+                allowed-headers: '*'          # kebab-case로 변경
+                allowed-methods:
+                  - GET
+                  - POST
+                  - HEAD
+                  - OPTIONS
 
-      default-filters:
-#        - RemoveHttpHeadersFilter
-#        - HeaderFilter
+          default-filters:
+            - RemoveHttpHeadersFilter
+            - HeaderFilter
+          # 필요한 필터 추가
 
-    security:
-      user:
-        name: user
-        password: user_dev
+  # ✅ security를 최상위로 이동
+  security:
+    user:
+      name: user
+      password: user_dev
 
-    endpoint:
-      health:
-        enabled: true
-        show-details: never
-      refresh:
-        enabled: true
-    tracing:
-      enabled: true
-      sampling:
-        probability: 1.0
-      propagation:
-        type: w3c
 
 logging:
   config: classpath:logback-spring.xml
@@ -74,6 +73,11 @@ logging:
 
 management:
   tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+    propagation:
+      type: w3c
     baggage:
       correlation:
         fields:
@@ -93,40 +97,14 @@ management:
 # server graceful 추가
 server:
   shutdown: graceful
-  port: 8443  # HTTPS 메인포트
+  port: 8080
 
-
-  # SSL/TLS 설정
   ssl:
-    enabled: true
-    key-store: classpath:keystore.p12
-    key-store-password: ${SSL_KEYSTORE_PASSWORD:changeit}
-    key-store-type: PKCS12
-    key-alias: localhost
-
-    # 보안 프로토콜 설정
-    protocol: TLS
-    enabled-protocols: TLSv1.2,TLSv1.3
-
-    # Cipher Suite 설정 (강력한 암호화만 허용)
-    ciphers:
-      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-      - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-      - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
-
-    # 클라이언트 인증 (필요시 활성화)
-    # client-auth: need  # none, want, need 중 선택
-
-  # HTTP/2 활성화 - 프로토콜 레벨 최적화
-  # 효과: 멀티플렉싱, 헤더 압축(HPACK), 서버 푸시
-  # HTTPS가 필수이므로 SSL 설정과 함께 사용
+    enabled: false
   http2:
-    enabled: true
+    enabled: false
 
-  # Response Body 압축 설정 - 데이터 전송량 최적화
-  # 효과: JSON, HTML 등 텍스트 기반 응답을 70-90% 압축
-  # HTTP/2의 헤더 압축과는 별개로 본문(body)을 압축
+  # Response Body 압축 설정
   compression:
     enabled: true
     mime-types:
@@ -138,4 +116,17 @@ server:
       - application/javascript
       - application/json
       - application/xml
+      - application/x-www-form-urlencoded
     min-response-size: 1024
+
+# HTTPS 8443
+custom:
+  https:
+    enabled: true
+    port: 8443
+    keystore:
+      path: classpath:keystore.p12
+      password: gateway.!
+      type: PKCS12
+      alias: gateway
+

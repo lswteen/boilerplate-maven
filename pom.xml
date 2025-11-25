@@ -25,6 +25,7 @@
     <spring.boot.version>3.5.0</spring.boot.version>
     <spring.cloud.version>2025.0.0</spring.cloud.version>
     <maven.compiler.plugin>3.11.0</maven.compiler.plugin>
+    <netty.version>4.1.124.Final</netty.version>  <!-- ✅ 추가 -->
     <lombok.version>1.18.30</lombok.version>
     <junit.version>3.8.1</junit.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
@@ -34,7 +35,16 @@
   </properties>
   <!-- 공통 설정 관리 -->
   <dependencyManagement>
+
     <dependencies>
+      <!-- ✅ Netty BOM 추가 (제일 위에 배치) -->
+      <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-bom</artifactId>
+        <version>${netty.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <!-- Spring Boot Parent Dependency POM -->
       <dependency>
         <groupId>org.springframework.boot</groupId>

@@ -15,7 +15,6 @@
   <properties>
     <de.codecentric.version>3.2.1</de.codecentric.version>
     <commons-lang3.version>3.13.0</commons-lang3.version>
-<!--    <io.netty.version>4.1.100.Final</io.netty.version>-->
     <commons-net.version>3.10.0</commons-net.version>
   </properties>
 
@@ -53,7 +52,13 @@
     <!-- spring cloud-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-gateway</artifactId>
+      <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
+    </dependency>
+    <!-- 임시로 유지 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-properties-migrator</artifactId>
+      <scope>runtime</scope>
     </dependency>
     <!-- dev tool -->
     <dependency>
@@ -88,12 +93,7 @@
       <artifactId>commons-lang3</artifactId>
       <version>${commons-lang3.version}</version>
     </dependency>
-    <!-- Netty DNS 리졸버 의존성 추가-->
-<!--    <dependency>-->
-<!--      <groupId>io.netty</groupId>-->
-<!--      <artifactId>netty-resolver-dns-native-macos</artifactId>-->
-<!--      <version>${io.netty.version}</version>-->
-<!--    </dependency>-->
+
     <!-- Commons Net-->
     <dependency>
       <groupId>commons-net</groupId>
