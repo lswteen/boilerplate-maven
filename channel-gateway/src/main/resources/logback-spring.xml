@@ -81,21 +81,6 @@
         <includeCallerData>false</includeCallerData>
         <neverBlock>true</neverBlock>
     </appender>
-<!--
-    <appender name="RABBITMQ_APPENDER" class="com.qpg.gateway.amqp.CustomAppender">
-        <deliveryMode>PERSISTENT</deliveryMode>
-        <contentType>application/json</contentType>
-        <contentEncoding>UTF-8</contentEncoding>
-        <addresses>rmq.giosis.net:5672</addresses>
-        <username>rabbitmq</username>
-        <password>rabbitmq</password>
-        <charset>UTF-8</charset>
-        <routingKeyPattern>ErrorLog</routingKeyPattern>
-        <encoder>
-            <pattern>"[{\\"svc_nation_cd\\":\\"%X{svc_nation_cd}\\",\\"app_no\\":%X{appNo},\\"logtype\\":1,\\"contexturl\\":\\"%X{contexturl}\\",\\"useragent\\":\\"%X{useragent}\\",\\"postion\\":%X{postion},\\"location\\":\\"%X{location}\\",\\"targetserver\\":\\"%X{targetserver}\\",\\"message\\":\\"PsgGateway\\",\\"detailmessage\\":\\"%msg\\",\\"page_no\\":%X{page_no},\\"device_info\\":\\"%X{device_info}\\",\\"log_dt\\":\\"%d{yyyy-MM-dd'T'HH:mm:ss.SSS'Z'}\\",\\"client_ip\\":\\"%X{clientIP}\\"}]"</pattern>
-        </encoder>
-    </appender>
--->
     <!-- 로그 레벨 설정 -->
     <logger name="java.sql" level="INFO"/>
     <logger name="org.apache" level="WARN"/>
@@ -110,6 +95,11 @@
         <logger name="springfox" level="ERROR"/>
         <logger name="com.zaxxer.hikari" level="DEBUG"/>
 
+        <!-- netty access log -->
+        <logger name="reactor.netty.http.server.AccessLog" level="INFO">
+            <appender-ref ref="ACCESS_LOG_ASYNC_APPENDER"/>
+        </logger>
+
         <logger name="com.qpg.gateway" level="ERROR">
             <appender-ref ref="FILE_ERROR_APPENDER"/>
         </logger>
@@ -119,6 +109,7 @@
 
         <!-- 정의 되지 않은 logger 들에게 일괄 적용됨 -->
         <root level="ERROR">
+            <appender-ref ref="FILE_ASYNC_APPENDER"/>
             <appender-ref ref="CONSOLE_APPENDER"/>
         </root>
     </springProfile>

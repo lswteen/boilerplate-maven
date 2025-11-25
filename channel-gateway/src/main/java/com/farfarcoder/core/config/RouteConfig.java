@@ -36,18 +36,25 @@ public class RouteConfig {
     @Order(-1)
     @EventListener(RefreshScopeRefreshedEvent.class)
     public void refresh() {
-        try{
+        try {
             String[] activeProfiles = environment.getActiveProfiles();
             if (activeProfiles.length == 0) {
                 log.info("No active profiles set.");
             } else {
                 log.info("Active profiles: {}", String.join(", ", activeProfiles));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.info("activeProfiles not set.");
         }
 
-        log.info("RouteProperties refresh.2222222");
+        log.info("RouteProperties refresh");
+
+        // Null 체크 추가
+        if (routeProperties.routes() == null) {
+            log.warn("routeProperties.routes() is null. Skipping route configuration.");
+            return;
+        }
+
         routeProperties.routes()
                 .forEach((key, value) -> addRoute(key, value, gatewayProperties.getRoutes()));
     }

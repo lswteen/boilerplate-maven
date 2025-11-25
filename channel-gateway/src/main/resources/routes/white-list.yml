@@ -1,0 +1,11 @@
+boilerplate:
+  authorization:
+    auth-info-map:
+      in-bound-oauth-server:
+        client-ip:
+          - 0:0:0:0:0:0:0:1
+          - 127.0.0.1
+      out-bound-hts-server:
+        client-ip:
+          - 0:0:0:0:0:0:0:1
+          - 127.0.0.1

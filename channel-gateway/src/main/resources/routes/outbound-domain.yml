@@ -1,0 +1,12 @@
+outbound:
+  domain:
+    naver-oauth:
+      local: https://nid.naver.com
+      dev: https://nid.naver.com
+      stg: https://nid.naver.com
+      prd: https://nid.naver.com
+    naver-api:
+      local: https://openapi.naver.com
+      dev: https://openapi.naver.com
+      stg: https://openapi.naver.com
+      prd: https://openapi.naver.com
